@@ -1,0 +1,2521 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>জামিয়া আরাবিয়া ইমদাদুল উলূম</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--primary-green:#059669;--accent-green:#10b981;--light-green:#d1fae5;--text-dark:#1f2937;--text-light:#ffffff;--bg-color:#f3f4f6;--border-radius:12px;--shadow:0 4px 6px rgba(0,0,0,0.05);--shadow-lg:0 10px 15px rgba(0,0,0,0.1);--card-bg:#ffffff}
+body.dark-mode{--primary-green:#10b981;--accent-green:#34d399;--light-green:#064e3b;--text-dark:#f3f4f6;--text-light:#1f2937;--bg-color:#111827;--shadow:0 4px 6px rgba(0,0,0,0.3);--shadow-lg:0 10px 15px rgba(0,0,0,0.5);--card-bg:#1f2937}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Hind Siliguri',sans-serif;background-color:var(--bg-color);color:var(--text-dark);line-height:1.6;padding-bottom:80px;transition:background .3s,color .3s}
+.hidden{display:none!important}
+.header-top{background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;padding:46px 18px 14px;text-align:center;border-bottom-left-radius:18px;border-bottom-right-radius:18px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.madrasa-logo{width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.75);background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.18);margin:0 auto 5px;display:block}
+.arabic-calligraphy{max-width:180px;max-height:48px;object-fit:contain;margin:3px auto 4px;display:block;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2))}
+.arabic-title{font-family:'Amiri',serif;font-size:1.1rem;margin-bottom:3px;color:#ecfdf5}
+.header-top h1{font-size:1.05rem;font-weight:700;margin-bottom:2px;line-height:1.25}
+.header-top p{font-size:.75rem;opacity:.92}
+.header-menu-btn,.dark-mode-toggle{position:absolute;top:10px;width:38px;height:38px;background:rgba(255,255,255,.25);backdrop-filter:blur(5px);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;cursor:pointer;z-index:999;border:1px solid rgba(255,255,255,.3)}
+.header-menu-btn{left:10px}.dark-mode-toggle{right:10px}
+.user-chip{position:absolute;top:56px;right:10px;background:rgba(255,255,255,.2);color:#fff;padding:4px 10px;border-radius:20px;font-size:.7rem;font-weight:600;display:flex;align-items:center;gap:5px;cursor:pointer;border:1px solid rgba(255,255,255,.3);z-index:999}
+.date-bar{text-align:center;font-size:.85rem;color:var(--text-dark);margin:12px 20px;font-weight:600;background:var(--card-bg);padding:9px;border-radius:12px;box-shadow:var(--shadow)}
+.menu-drawer{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,.55);z-index:9998;overflow:hidden}
+.menu-drawer-content{background:var(--card-bg);width:88%;max-width:360px;height:100vh;overflow-y:auto;padding:20px;box-shadow:var(--shadow-lg)}
+.menu-drawer-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--light-green)}
+.menu-drawer-header h3{color:var(--primary-green);font-size:1.1rem}
+.menu-close-btn{background:#dc2626;color:#fff;border:none;width:34px;height:34px;border-radius:50%;font-size:.95rem;cursor:pointer}
+.menu-main-item{display:flex;align-items:center;justify-content:space-between;padding:12px 15px;background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;border-radius:10px;font-weight:600;cursor:pointer;margin-bottom:6px;font-size:.88rem}
+.menu-sub-item{padding:10px 14px;margin:4px 0 4px 15px;background:var(--bg-color);border-radius:8px;cursor:pointer;font-size:.83rem;color:var(--text-dark);border-left:3px solid var(--accent-green)}
+.menu-sub-container{display:none;margin-bottom:4px}
+.menu-sub-container.open{display:block}
+.page-content{display:none;padding:0 20px}
+.page-content.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.section-title{font-size:1.1rem;font-weight:700;color:var(--primary-green);margin:20px 0 12px;display:flex;align-items:center;gap:8px}
+.grid-container{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.grid-4-col{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.feature-card{background:var(--card-bg);border-radius:var(--border-radius);padding:15px 5px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;box-shadow:var(--shadow);cursor:pointer;border:1px solid rgba(0,0,0,.05)}
+.feature-card:active{transform:scale(.95)}
+.feature-card i{font-size:1.5rem;color:var(--accent-green)}
+.feature-card span{font-size:.75rem;font-weight:600;color:var(--text-dark)}
+.main-card{padding:20px 10px}.main-card i{font-size:2rem}.main-card span{font-size:.85rem}
+.form-box,.filter-section{background:var(--card-bg);padding:15px;border-radius:var(--border-radius);box-shadow:var(--shadow);margin-bottom:15px}
+.form-group{margin-bottom:12px}
+.form-group label{font-size:.85rem;font-weight:600;display:block;margin-bottom:5px;color:var(--primary-green)}
+.form-group input,.form-group select,.form-group textarea,.filter-select{width:100%;padding:12px;border-radius:10px;border:1px solid #d1d5db;background-color:var(--bg-color);font-family:'Hind Siliguri',sans-serif;font-size:.9rem;outline:none;color:var(--text-dark)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent-green);background:var(--card-bg)}
+.btn-primary{width:100%;background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;border:none;padding:12px;border-radius:10px;font-weight:600;font-size:.95rem;cursor:pointer;font-family:'Hind Siliguri',sans-serif}
+.btn-primary:active{transform:scale(.98)}
+.btn-danger{background:#dc2626!important}.btn-warning{background:#d97706!important}.btn-info{background:#2563eb!important}
+.btn-sm{padding:6px 12px;font-size:.8rem;width:auto}
+.back-btn{background:var(--card-bg);border:none;padding:8px 15px;border-radius:20px;font-size:.85rem;font-weight:600;color:var(--primary-green);box-shadow:var(--shadow);cursor:pointer;margin-bottom:15px;display:inline-flex;align-items:center;gap:5px;font-family:'Hind Siliguri',sans-serif}
+.student-list{display:flex;flex-direction:column;gap:12px}
+.student-card{background:var(--card-bg);border-radius:var(--border-radius);padding:15px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow);border-left:4px solid var(--accent-green)}
+.student-header{display:flex;align-items:center;gap:15px;border-bottom:1px dashed #e5e7eb;padding-bottom:10px}
+.student-img{width:65px;height:65px;border-radius:50%;object-fit:cover;border:3px solid var(--light-green)}
+.student-info{flex:1}.student-info h4{color:var(--primary-green);font-size:1.05rem;margin-bottom:3px}
+.student-info p{font-size:.8rem;color:#6b7280;margin-bottom:2px;display:flex;align-items:center;gap:5px}
+.student-bio{font-size:.85rem;color:#4b5563;font-style:italic;padding:8px;line-height:1.5;background:var(--bg-color);border-radius:8px;border-left:3px solid var(--accent-green)}
+.social-btns{display:flex;gap:8px;margin-top:6px}
+.social-btns a{width:32px;height:32px;border-radius:50%;background:var(--light-green);color:var(--primary-green);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.9rem}
+.ad-card{background:linear-gradient(135deg,#fff,#f0fdf4);border-radius:16px;padding:18px;box-shadow:0 8px 20px rgba(5,150,105,.15);border:1px solid var(--light-green);position:relative;overflow:hidden;margin-bottom:15px}
+.ad-card::before{content:'';position:absolute;top:0;left:0;width:5px;height:100%;background:linear-gradient(to bottom,var(--primary-green),var(--accent-green))}
+.ad-badge{display:inline-flex;align-items:center;gap:6px;background:var(--primary-green);color:#fff;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:700;margin-bottom:10px}
+.ad-text{font-size:.9rem;color:var(--text-dark);line-height:1.6;margin-bottom:15px;font-weight:500}
+.countdown-label{font-size:.8rem;font-weight:700;color:var(--primary-green);margin-bottom:8px}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.countdown-item{background:var(--card-bg);border-radius:10px;padding:8px 4px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.countdown-item .number{font-size:1.2rem;font-weight:800;color:var(--primary-green)}
+.countdown-item .label{font-size:.65rem;color:#6b7280;font-weight:600}
+body.dark-mode .ad-card{background:linear-gradient(135deg,#1f2937,#111827)}
+body.dark-mode .countdown-item{background:#374151;border-color:#4b5563}
+.widget-box{background:var(--card-bg);border-radius:18px;padding:16px;margin:0 0 18px;box-shadow:var(--shadow);border-top:4px solid var(--accent-green)}
+.widget-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.widget-date-bn{font-size:.85rem;font-weight:700;color:var(--primary-green)}
+.widget-date-ar{font-family:'Amiri',serif;font-size:1.05rem;color:var(--accent-green)}
+.widget-namaz-row{display:flex;gap:4px;margin-bottom:10px;overflow-x:auto;scrollbar-width:none}
+.widget-namaz-row::-webkit-scrollbar{display:none}
+.widget-namaz-item{flex:1;min-width:55px;text-align:center;padding:8px 4px;border-radius:10px;background:var(--bg-color);transition:all .3s}
+.widget-namaz-item.active{background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;transform:scale(1.05)}
+.widget-namaz-item .nm{display:block;font-size:.7rem;font-weight:700}
+.widget-namaz-item .tm{display:block;font-size:.62rem;opacity:.85;margin-top:2px}
+.widget-progress-line{width:100%;height:8px;background:#e5e7eb;border-radius:4px;overflow:hidden;margin-bottom:8px}
+.widget-progress-fill{height:100%;background:linear-gradient(90deg,var(--primary-green),var(--accent-green));width:0;transition:width .5s}
+.widget-countdown-text{font-size:.85rem;font-weight:700;color:var(--accent-green);text-align:center}
+.widget-countdown-text .sec{color:#d97706}
+.bottom-nav{position:fixed;bottom:0;width:100%;background:var(--card-bg);display:flex;justify-content:space-around;padding:12px 0 15px;border-top:1px solid #e5e7eb;z-index:1000;box-shadow:0 -2px 10px rgba(0,0,0,.05);border-top-left-radius:20px;border-top-right-radius:20px}
+.nav-item{text-align:center;color:#9ca3af;font-size:.65rem;cursor:pointer;flex:1}
+.nav-item i{font-size:1.1rem;display:block;margin-bottom:4px}
+.nav-item.active{color:var(--primary-green);font-weight:700}
+.admin-section{background:var(--card-bg);padding:15px;border-radius:var(--border-radius);box-shadow:var(--shadow);margin-bottom:15px;border-left:4px solid var(--accent-green)}
+.admin-section h4{color:var(--primary-green);margin-bottom:10px;font-size:1rem;border-bottom:1px dashed #e5e7eb;padding-bottom:8px}
+.admin-list-item{border-bottom:1px dashed #eee;padding:10px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.admin-list-info{flex:1;font-size:.85rem}
+.menu-tree-item{background:var(--bg-color);padding:10px;border-radius:8px;margin-bottom:8px;border-left:4px solid var(--accent-green)}
+.menu-tree-children{margin-top:8px;padding-left:15px;border-left:2px dashed #ccc}
+.menu-tree-child{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:.85rem}
+.amal-group{background:var(--card-bg);border-radius:14px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden;border-left:4px solid var(--accent-green)}
+.amal-group-header{display:flex;justify-content:space-between;align-items:center;padding:14px 15px;cursor:pointer}
+.amal-group-header h4{color:var(--primary-green);font-size:.95rem;display:flex;align-items:center;gap:8px}
+.amal-group-body{padding:5px 15px 15px;display:none}
+.amal-group-body.open{display:block}
+.amal-check-item{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--bg-color)}
+.amal-check-item:last-child{border-bottom:none}
+.amal-check-item input[type=checkbox]{width:20px;height:20px;accent-color:var(--accent-green);flex-shrink:0}
+.amal-check-item label{font-size:.88rem;color:var(--text-dark);cursor:pointer;flex:1}
+.report-tabs{display:flex;background:var(--bg-color);border-radius:10px;padding:4px;margin-bottom:12px;gap:4px}
+.report-tab{flex:1;text-align:center;padding:8px 4px;border-radius:8px;font-size:.75rem;font-weight:600;cursor:pointer;color:#6b7280}
+.report-tab.active{background:var(--card-bg);color:var(--primary-green);box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.report-stat-card{background:var(--bg-color);border-radius:12px;padding:15px;margin-bottom:10px;text-align:center}
+.report-stat-card .value{font-size:1.8rem;font-weight:800;color:var(--primary-green)}
+.report-stat-card .lbl{font-size:.8rem;color:#6b7280}
+.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cal-grid-7{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-head-cell{text-align:center;color:var(--accent-green);font-size:.72rem;font-weight:700;padding:6px 0}
+.cal-day-cell{text-align:center;padding:8px 2px;border-radius:10px;background:var(--bg-color);font-weight:600;font-size:.9rem;color:var(--text-dark);line-height:1.2}
+.cal-day-cell.today{background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;box-shadow:0 4px 10px rgba(5,150,105,.4)}
+.cal-day-cell .hij{display:block;font-size:.6rem;opacity:.75;margin-top:2px;font-weight:500}
+.cal-day-cell.today .hij{opacity:1;color:#d1fae5}
+.social-links-box{background:linear-gradient(135deg,var(--primary-green),var(--accent-green));border-radius:16px;padding:18px;margin:18px 0 10px;color:#fff;text-align:center}
+.social-links-box h4{font-size:1rem;margin-bottom:12px}
+.social-links-grid{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.social-link-btn{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.25rem;text-decoration:none;border:1px solid rgba(255,255,255,.3)}
+.login-hero{text-align:center;padding:30px 15px 20px;background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;margin:0 -20px 20px;border-bottom-left-radius:30px;border-bottom-right-radius:30px}
+.login-hero img{width:90px;height:90px;border-radius:50%;border:3px solid #fff;background:#fff;margin-bottom:10px}
+.login-hero h2{font-size:1.15rem;margin-bottom:5px}
+.login-hero p{font-size:.85rem;opacity:.9}
+.login-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border-radius:12px;border:none;font-size:.95rem;font-weight:600;cursor:pointer;width:100%;margin-bottom:10px;font-family:'Hind Siliguri',sans-serif}
+.login-btn.google{background:#fff;color:#3c4043;border:1px solid #dadce0}
+.login-btn.guest{background:var(--bg-color);color:var(--text-dark);border:1px solid #d1d5db}
+.login-btn.primary{background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff}
+.auth-tabs{display:flex;background:var(--bg-color);border-radius:10px;padding:4px;margin-bottom:15px;gap:4px}
+.auth-tab{flex:1;text-align:center;padding:9px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;color:#6b7280}
+.auth-tab.active{background:var(--card-bg);color:var(--primary-green);box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.person-card{background:var(--card-bg);border-radius:14px;box-shadow:var(--shadow);padding:14px;margin-bottom:12px;border-left:4px solid var(--accent-green);display:flex;gap:12px}
+.person-card img{width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid var(--light-green);flex-shrink:0}
+.person-card-body{flex:1}
+.person-card-body h4{color:var(--primary-green);font-size:1rem;margin-bottom:2px}
+.person-card-body .role{font-size:.75rem;color:var(--accent-green);font-weight:700;margin-bottom:6px}
+.person-card-body .bio{font-size:.85rem;color:var(--text-dark);line-height:1.5;margin-bottom:6px}
+.person-card-body .meta{font-size:.75rem;color:#6b7280}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.gallery-thumb{aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--bg-color);cursor:pointer;box-shadow:var(--shadow)}
+.gallery-thumb img{width:100%;height:100%;object-fit:cover}
+.gallery-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:15px}
+.gallery-lightbox img{max-width:100%;max-height:75vh;border-radius:10px}
+.gallery-lightbox .cap{color:#fff;text-align:center;margin-top:12px;font-size:.9rem}
+.gallery-lightbox .close-btn{position:absolute;top:15px;right:15px;background:#dc2626;color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+.gallery-lightbox .nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.25);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+.edu-card{background:var(--card-bg);border-radius:14px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px;border-left:4px solid var(--accent-green);cursor:pointer}
+.edu-card h4{color:var(--primary-green);font-size:1rem;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.edu-card p{font-size:.85rem;color:var(--text-dark);line-height:1.5}
+.contact-card{background:var(--card-bg);border-radius:14px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+.contact-card .ico{width:48px;height:48px;border-radius:50%;background:var(--light-green);color:var(--primary-green);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.contact-card .body{flex:1}
+.contact-card .body h4{font-size:.9rem;color:var(--primary-green);margin-bottom:4px}
+.contact-card .body p,.contact-card .body a{font-size:.88rem;color:var(--text-dark);text-decoration:none;line-height:1.5;word-break:break-word}
+.notif-card{background:var(--card-bg);border-radius:14px;box-shadow:var(--shadow);padding:14px;margin-bottom:12px;border-left:4px solid var(--accent-green)}
+.notif-card .badge{display:inline-block;background:var(--light-green);color:var(--primary-green);font-size:.7rem;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:8px}
+.notif-card h4{color:var(--primary-green);font-size:.95rem;margin-bottom:6px}
+.notif-card .body{font-size:.85rem;line-height:1.6;color:var(--text-dark)}
+.notif-card .body .ar{font-family:'Amiri',serif;font-size:1.15rem;direction:rtl;text-align:right;color:var(--primary-green);line-height:2;margin-bottom:8px}
+.notif-card .ref{font-size:.72rem;color:#6b7280;font-style:italic;margin-top:6px}
+.quran-surah-item{background:var(--card-bg);border-radius:12px;padding:12px 15px;margin-bottom:8px;box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center;cursor:pointer;border-left:3px solid var(--accent-green)}
+.quran-surah-item .left{flex:1}
+.quran-surah-item .num{width:36px;height:36px;border-radius:50%;background:var(--light-green);color:var(--primary-green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;margin-right:12px}
+.quran-surah-item .name-bn{font-weight:700;color:var(--primary-green);font-size:.95rem}
+.quran-surah-item .name-ar{font-family:'Amiri',serif;font-size:1.05rem;color:var(--accent-green);direction:rtl}
+.quran-surah-item .info{font-size:.72rem;color:#6b7280;margin-top:2px}
+.ayah-card{background:var(--card-bg);border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:var(--shadow);border-left:4px solid var(--accent-green)}
+.ayah-card .num-badge{display:inline-block;background:var(--light-green);color:var(--primary-green);font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:10px}
+.ayah-card .ar{font-family:'Amiri',serif;font-size:1.6rem;direction:rtl;text-align:right;line-height:2.2;color:var(--primary-green);margin-bottom:12px}
+.ayah-card .bn{font-size:.95rem;line-height:1.7;color:var(--text-dark)}
+.mushaf-scroll{background:#fdf6e3;border-radius:14px;padding:20px;box-shadow:var(--shadow);max-height:70vh;overflow-y:auto;scroll-behavior:smooth}
+body.dark-mode .mushaf-scroll{background:#1a1a1a}
+.mushaf-scroll .ar{font-family:'Amiri',serif;font-size:1.7rem;direction:rtl;text-align:right;line-height:2.4;color:#1f2937}
+body.dark-mode .mushaf-scroll .ar{color:#f3f4f6}
+.mushaf-controls{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap;align-items:center;background:var(--card-bg);padding:12px;border-radius:12px;box-shadow:var(--shadow)}
+.mushaf-controls button{background:var(--primary-green);color:#fff;border:none;padding:8px 14px;border-radius:20px;font-size:.8rem;cursor:pointer;font-family:'Hind Siliguri',sans-serif}
+.mushaf-controls button:disabled{opacity:.5}
+.mushaf-controls input[type=range]{flex:1;min-width:100px;accent-color:var(--accent-green)}
+.zakat-result{background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;border-radius:16px;padding:20px;margin-top:15px;text-align:center}
+.zakat-result .big{font-size:2rem;font-weight:800;margin:8px 0}
+.zakat-result .lbl{font-size:.85rem;opacity:.9}
+.zakat-result .row{display:flex;justify-content:space-between;padding:6px 0;font-size:.85rem;border-bottom:1px solid rgba(255,255,255,.15)}
+.age-result{background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;border-radius:16px;padding:20px;margin-top:15px;text-align:center}
+.age-result .big{font-size:1.6rem;font-weight:800;margin:10px 0}
+.age-result .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.age-result .item{background:rgba(255,255,255,.15);border-radius:10px;padding:10px 5px}
+.age-result .item .v{font-size:1.4rem;font-weight:800}
+.age-result .item .l{font-size:.7rem;opacity:.9}
+.compass-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:25px 15px;background:var(--card-bg);border-radius:20px;box-shadow:var(--shadow)}
+.compass-circle{width:260px;height:260px;border-radius:50%;border:5px solid var(--primary-green);position:relative;background:radial-gradient(circle,var(--bg-color),var(--card-bg));box-shadow:inset 0 0 30px rgba(0,0,0,.1);margin:15px 0}
+.compass-circle .dir{position:absolute;font-weight:800;color:var(--primary-green);font-size:1rem}
+.compass-circle .dir.n{top:8px;left:50%;transform:translateX(-50%)}
+.compass-circle .dir.s{bottom:8px;left:50%;transform:translateX(-50%)}
+.compass-circle .dir.e{right:8px;top:50%;transform:translateY(-50%)}
+.compass-circle .dir.w{left:8px;top:50%;transform:translateY(-50%)}
+.compass-needle{position:absolute;top:50%;left:50%;width:6px;height:110px;margin-left:-3px;transform-origin:50% 100%;background:linear-gradient(to bottom,#10b981 0%,#10b981 50%,#dc2626 50%,#dc2626 100%);border-radius:3px;box-shadow:0 0 6px rgba(0,0,0,.3)}
+.compass-kaaba{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:var(--primary-green);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 4px 10px rgba(0,0,0,.25);z-index:5}
+.compass-info{margin-top:15px;font-size:.85rem;color:var(--text-dark);text-align:center;line-height:1.6}
+.compass-qibla-arrow{position:absolute;top:50%;left:50%;width:4px;height:110px;margin-left:-2px;transform-origin:50% 100%;background:#f59e0b;border-radius:2px;box-shadow:0 0 8px #f59e0b}
+.user-menu-pop{position:fixed;top:90px;right:15px;background:var(--card-bg);border-radius:14px;box-shadow:var(--shadow-lg);padding:12px;z-index:9999;min-width:200px;border:1px solid var(--light-green)}
+.user-menu-pop .uinfo{padding:8px 10px;border-bottom:1px solid var(--bg-color);margin-bottom:8px}
+.user-menu-pop .uinfo .un{font-weight:700;color:var(--primary-green);font-size:.9rem}
+.user-menu-pop .uinfo .ue{font-size:.72rem;color:#6b7280;word-break:break-all}
+.user-menu-pop button{width:100%;background:transparent;border:none;padding:10px;text-align:left;border-radius:8px;font-size:.85rem;color:var(--text-dark);cursor:pointer;font-family:'Hind Siliguri',sans-serif}
+.user-menu-pop button:hover{background:var(--bg-color)}
+.user-menu-pop button.danger{color:#dc2626}
+</style>
+</head>
+<body>
+
+<!-- ========== AUTH / LOGIN PAGE ========== -->
+<div id="login-page" class="page-content active" style="padding:0 20px;">
+<div class="login-hero">
+<img src="https://i.ibb.co.com/DDhMcBnD/IMG-20261003-021938.jpg" alt="লোগো" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3299/3299935.png'">
+<h2>জামিয়া আরাবিয়া ইমদাদুল উলূম</h2>
+<p>ফরিদাবাদ, ঢাকা-১২০৪</p>
+</div>
+
+<div class="auth-tabs">
+<div class="auth-tab active" id="tabLogin" onclick="switchAuthTab('login')">লগইন</div>
+<div class="auth-tab" id="tabSignup" onclick="switchAuthTab('signup')">নতুন অ্যাকাউন্ট</div>
+</div>
+
+<div class="form-box" id="authFormBox">
+<div class="form-group"><label>ইমেইল (Gmail)</label><input type="email" id="authEmail" placeholder="example@gmail.com"></div>
+<div class="form-group"><label>পাসওয়ার্ড</label><input type="password" id="authPass" placeholder="কমপক্ষে ৬ অক্ষর"></div>
+<div class="form-group" id="signupNameGroup" style="display:none;"><label>আপনার নাম</label><input type="text" id="authName" placeholder="পূর্ণ নাম"></div>
+<button class="btn-primary" id="authSubmitBtn" onclick="submitAuth()">🔵 লগইন করুন</button>
+<p id="authError" style="color:#dc2626;font-size:.85rem;text-align:center;margin-top:10px;"></p>
+</div>
+
+<div style="text-align:center;color:#6b7280;font-size:.8rem;margin:15px 0;">অথবা</div>
+<button class="login-btn guest" onclick="loginAsGuest()">
+<i class="fa-solid fa-user-secret"></i> অতিথি হিসেবে চালিয়ে যান
+</button>
+<p style="text-align:center;font-size:.75rem;color:#6b7280;margin-top:20px;padding:0 20px;">
+অতিথি মোডে ডেটা শুধু এই ফোনে থাকবে। Gmail দিয়ে লগইন করলে ডেটা নিরাপদে সংরক্ষিত থাকবে এবং ভবিষ্যতে অন্য ফোন থেকেও পাওয়া যাবে।
+</p>
+</div>
+
+<!-- ========== MAIN APP (hidden until login) ========== -->
+<div id="mainApp" class="hidden">
+
+<!-- HEADER -->
+<div class="header-top">
+<div class="header-menu-btn" onclick="toggleMainMenu()"><i class="fa-solid fa-bars"></i></div>
+<div class="dark-mode-toggle" id="darkModeToggle" onclick="toggleDarkMode()">🌙</div>
+<div class="user-chip" id="userChip" onclick="toggleUserMenu()"><i class="fa-solid fa-user-circle"></i> <span id="userChipName">Guest</span></div>
+
+<img id="madrasaLogoHeader" src="https://i.ibb.co.com/DDhMcBnD/IMG-20261003-021938.jpg" alt="লোগো" class="madrasa-logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3299/3299935.png'">
+<img id="madrasaArabicImg" class="arabic-calligraphy" src="https://i.ibb.co.com/fz3vhmtV/calligraphy.png" alt="আরবি" onerror="this.style.display='none';document.getElementById('madrasaArabic').style.display='block';">
+<div class="arabic-title" id="madrasaArabic" style="display:none;">الجامعة العربية إمداد العلوم</div>
+<h1 id="madrasaName">জামিয়া আরাবিয়া ইমদাদুল উলূম</h1>
+<p id="madrasaAddress">ফরিদাবাদ, ঢাকা-১২০৪</p>
+</div>
+
+<div class="date-bar" id="currentDate">লোড হচ্ছে...</div>
+
+<!-- USER MENU POPUP -->
+<div id="userMenuPop" class="user-menu-pop hidden">
+<div class="uinfo">
+<div class="un" id="userMenuName">Guest</div>
+<div class="ue" id="userMenuEmail">guest@local</div>
+</div>
+<button onclick="openUserNotifSettings()">🔔 নোটিফিকেশন সেটিংস</button>
+<button onclick="openUserBackup()">💾 ডেটা ব্যাকআপ</button>
+<button class="danger" onclick="logoutUser()">🚪 লগআউট</button>
+</div>
+
+<!-- MENU DRAWER -->
+<div id="mainMenuDrawer" class="menu-drawer hidden" onclick="if(event.target===this) toggleMainMenu()">
+<div class="menu-drawer-content">
+<div class="menu-drawer-header">
+<h3><i class="fa-solid fa-bars"></i> প্রধান মেনু</h3>
+<button class="menu-close-btn" onclick="toggleMainMenu()"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<div id="mainMenuContent"><p style="text-align:center;color:#6b7280;">লোড হচ্ছে...</p></div>
+</div>
+</div>
+
+<!-- ========== HOME ========== -->
+<div id="home-page" class="page-content active">
+<div class="widget-box">
+<div class="widget-header">
+<div class="widget-date-bn" id="widgetDateBn">-</div>
+<div class="widget-date-ar" id="widgetDateAr">-</div>
+</div>
+<div class="widget-namaz-row">
+<div class="widget-namaz-item" data-namaz="fajr"><span class="nm">ফজর</span><span class="tm" id="wfajr">৪:৪৫</span></div>
+<div class="widget-namaz-item" data-namaz="dhuhr"><span class="nm">জোহর</span><span class="tm" id="wdhuhr">১২:০৫</span></div>
+<div class="widget-namaz-item" data-namaz="asr"><span class="nm">আসর</span><span class="tm" id="wasr">৪:১৫</span></div>
+<div class="widget-namaz-item" data-namaz="maghrib"><span class="nm">মাগরিব</span><span class="tm" id="wmaghrib">৫:৫০</span></div>
+<div class="widget-namaz-item" data-namaz="isha"><span class="nm">ইশা</span><span class="tm" id="wisha">৭:০৫</span></div>
+</div>
+<div class="widget-progress-line"><div class="widget-progress-fill" id="widgetProgressFill"></div></div>
+<div class="widget-countdown-text" id="widgetCountdownText">⏳ লোড হচ্ছে...</div>
+</div>
+
+<div class="section-title"><i class="fa-solid fa-layer-group"></i> বিভাগসমূহ</div>
+<div class="grid-container">
+<div class="feature-card main-card" onclick="openDivision('দারুল হাদিস (তাকমীল)')"><i class="fa-solid fa-book-open-reader"></i><span>দারুল হাদিস (তাকমীল)</span></div>
+<div class="feature-card main-card" onclick="openDivision('ইফতা বিভাগ')"><i class="fa-solid fa-scale-balanced"></i><span>ইফতা বিভাগ</span></div>
+<div class="feature-card main-card" onclick="openDivision('হেফজ বিভাগ')"><i class="fa-solid fa-book-quran"></i><span>হেফজ বিভাগ</span></div>
+<div class="feature-card main-card" onclick="openDivision('সকল ছাত্র')"><i class="fa-solid fa-users"></i><span>সকল ছাত্র</span></div>
+</div>
+
+<div style="margin-top:15px;">
+<div class="ad-card">
+<span class="ad-badge"><i class="fa-solid fa-bullhorn"></i> ঘোষণা</span>
+<p class="ad-text" id="adText">লোড হচ্ছে...</p>
+<div class="countdown-label"><i class="fa-solid fa-hourglass-half"></i> অনুষ্ঠান শুরু হতে বাকি</div>
+<div class="countdown-grid">
+<div class="countdown-item"><span class="number" id="cdDays">০</span><span class="label">দিন</span></div>
+<div class="countdown-item"><span class="number" id="cdHours">০</span><span class="label">ঘন্টা</span></div>
+<div class="countdown-item"><span class="number" id="cdMinutes">০</span><span class="label">মিনিট</span></div>
+<div class="countdown-item"><span class="number" id="cdSeconds">০</span><span class="label">সেকেন্ড</span></div>
+</div>
+</div>
+</div>
+
+<div class="section-title"><i class="fa-solid fa-toolbox"></i> দৈনন্দিন সেবা</div>
+<div class="grid-4-col">
+<div class="feature-card" onclick="switchPage('namaz-page')"><i class="fa-solid fa-clock"></i><span>নামাজের সময়</span></div>
+<div class="feature-card" onclick="switchPage('quran-page')"><i class="fa-solid fa-book-open"></i><span>আল-কুরআন</span></div>
+<div class="feature-card" onclick="switchPage('mushaf-page')"><i class="fa-solid fa-book-quran"></i><span>মুসহাফ</span></div>
+<div class="feature-card" onclick="switchPage('amal-tracker-page')"><i class="fa-solid fa-clipboard-check"></i><span>আমল ট্রাকার</span></div>
+<div class="feature-card" onclick="switchPage('zakat-page')"><i class="fa-solid fa-hand-holding-dollar"></i><span>যাকাত</span></div>
+<div class="feature-card" onclick="switchPage('age-page')"><i class="fa-solid fa-cake-candles"></i><span>বয়স</span></div>
+<div class="feature-card" onclick="switchPage('compass-page')"><i class="fa-solid fa-compass"></i><span>কিবলা</span></div>
+<div class="feature-card" onclick="switchPage('calendar-page')"><i class="fa-solid fa-calendar-days"></i><span>ক্যালেন্ডার</span></div>
+<div class="feature-card" onclick="switchPage('notif-page')"><i class="fa-solid fa-bell"></i><span>নোটিফিকেশন</span></div>
+<div class="feature-card" onclick="switchPage('calculator-page')"><i class="fa-solid fa-calculator"></i><span>ক্যালকুলেটর</span></div>
+<div class="feature-card" onclick="switchPage('notebook-page')"><i class="fa-solid fa-book-bookmark"></i><span>নোটবুক</span></div>
+<div class="feature-card" onclick="switchPage('messaging-page')"><i class="fa-solid fa-comments"></i><span>মেসেজ</span></div>
+</div>
+
+<div class="social-links-box">
+<h4><i class="fa-solid fa-share-nodes"></i> আমাদের সাথে থাকুন</h4>
+<div class="social-links-grid" id="socialLinksGrid"><p style="opacity:.7;font-size:.85rem;">শীঘ্রই যুক্ত হবে</p></div>
+</div>
+</div>
+
+<!-- ========== MENU DETAIL (Dynamic submenus) ========== -->
+<div id="menu-detail-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 id="menuDetailTitle" style="color:var(--primary-green);margin-bottom:15px;"></h3>
+<div id="menuDetailContent"></div>
+</div>
+
+<!-- ========== STUDENT DIRECTORY ========== -->
+<div id="fuzala-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 id="pageTitle" style="color:var(--primary-green);margin-bottom:15px;font-size:1.2rem;">ছাত্র তালিকা</h3>
+<div class="filter-section">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+<select id="filterDivision" class="filter-select" onchange="onDivisionChange()"><option value="">-- বিভাগ --</option></select>
+<select id="filterDistrict" class="filter-select" onchange="onDistrictChange()"><option value="">-- জেলা --</option></select>
+</div>
+<div style="margin-bottom:10px;"><input type="text" id="searchInput" onkeyup="loadStudents()" placeholder="নাম দিয়ে খুঁজুন..." class="filter-select"></div>
+<div style="text-align:center;"><button class="btn-primary" style="padding:10px;font-size:.9rem;" onclick="toggleForm()">+ নতুন ছাত্র যোগ করুন</button></div>
+</div>
+<div id="addStudentForm" class="hidden form-box">
+<h4 style="color:var(--primary-green);margin-bottom:10px;">বায়োডাটা ফরম</h4>
+<input type="hidden" id="editStudentId" value="">
+<div class="form-group"><label>নাম:</label><input type="text" id="sName" placeholder="আপনার নাম"></div>
+<div class="form-group"><label>বিভাগ (ক্লাস):</label><select id="sDivision"><option value="দারুল হাদিস (তাকমীল)">দারুল হাদিস (তাকমীল)</option><option value="ইফতা বিভাগ">ইফতা বিভাগ</option><option value="হেফজ বিভাগ">হেফজ বিভাগ</option></select></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+<div class="form-group"><label>বিভাগ (এলাকা):</label><select id="sDiv" onchange="onFormDivChange()"><option value="">-- বিভাগ --</option></select></div>
+<div class="form-group"><label>জেলা:</label><select id="sDist" onchange="onFormDistChange()"><option value="">-- জেলা --</option></select></div>
+</div>
+<div class="form-group"><label>থানা:</label><select id="sThana"><option value="">-- থানা --</option></select></div>
+<div class="form-group"><label>ছবি লিংক:</label><input type="url" id="sPhoto" placeholder="https://..."></div>
+<div class="form-group"><label>WhatsApp নম্বর:</label><input type="tel" id="sPhone" placeholder="017xxxxxxxx"></div>
+<div class="form-group"><label>ফেসবুক লিংক:</label><input type="url" id="sFb" placeholder="https://facebook.com/..."></div>
+<div class="form-group"><label>Bio:</label><textarea id="sBio" rows="3"></textarea></div>
+<button class="btn-primary" id="submitBtn" onclick="submitStudentBio()">জমা দিন</button>
+<button class="btn-primary" style="background:#6b7280;margin-top:5px;" onclick="toggleForm()">বাতিল করুন</button>
+</div>
+<div id="fuzalaListContainer" class="student-list"><p style="text-align:center;color:#6b7280;">তথ্য লোড হচ্ছে...</p></div>
+</div>
+
+<!-- ========== NAMAZ PAGE ========== -->
+<div id="namaz-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<div id="locationStatus" style="background:#f0fdf4;color:#166534;padding:10px;border-radius:10px;font-size:.85rem;margin-bottom:15px;display:flex;align-items:center;gap:8px;border:1px solid #bbf7d0;">
+<i class="fa-solid fa-location-dot"></i> <span id="locationText">অবস্থান সনাক্ত করা হচ্ছে...</span>
+</div>
+<div style="background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;padding:20px;border-radius:20px;margin-bottom:15px;">
+<div style="font-size:1rem;font-weight:600;margin-bottom:5px;display:flex;justify-content:space-between;"><span id="hijriDate">-</span><span><i class="fa-solid fa-moon"></i></span></div>
+<div style="font-size:.8rem;opacity:.9;margin-bottom:15px;" id="gregorianDate">-</div>
+<div style="display:flex;justify-content:space-between;font-size:.85rem;background:rgba(255,255,255,.1);padding:8px;border-radius:10px;">
+<span><i class="fa-solid fa-sun"></i> সূর্যোদয়: <span id="sunriseTime">-</span></span>
+<span><i class="fa-solid fa-sun"></i> সূর্যাস্ত: <span id="sunsetTime">-</span></span>
+</div>
+</div>
+<div class="admin-section">
+<h4><i class="fa-solid fa-mosque"></i> ফরজ নামাজ</h4>
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-color);"><span>ফজর</span><span style="font-weight:600;color:var(--primary-green);" id="fajrTime">-</span></div>
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-color);"><span>জোহর</span><span style="font-weight:600;color:var(--primary-green);" id="dhuhrTime">-</span></div>
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-color);"><span>আসর</span><span style="font-weight:600;color:var(--primary-green);" id="asrTime">-</span></div>
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-color);"><span>মাগরিব</span><span style="font-weight:600;color:var(--primary-green);" id="maghribTime">-</span></div>
+<div style="display:flex;justify-content:space-between;padding:10px 0;"><span>এশা</span><span style="font-weight:600;color:var(--primary-green);" id="ishaTime">-</span></div>
+</div>
+</div>
+
+<!-- ========== QURAN READER ========== -->
+<div id="quran-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">📖 আল-কুরআন</h3>
+<div class="form-box">
+<input type="text" id="quranSearchInput" placeholder="সূরা নাম বা নম্বর..." class="filter-select" onkeyup="renderSurahList()">
+</div>
+<div id="quranResults"></div>
+</div>
+
+<!-- ========== QURAN AYAH VIEWER ========== -->
+<div id="quran-ayah-page" class="page-content">
+<button class="back-btn" onclick="switchPage('quran-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 id="ayahSurahTitle" class="section-title" style="padding:0;"></h3>
+<div id="ayahList"></div>
+</div>
+
+<!-- ========== MUSHAF AUTO SCROLL ========== -->
+<div id="mushaf-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">📖 মুসহাফ — অটো স্ক্রল</h3>
+<div class="form-box">
+<div class="form-group"><label>সূরা নির্বাচন করুন:</label><select id="mushafSurahSelect" class="filter-select" onchange="loadMushafSurah()"></select></div>
+</div>
+<div class="mushaf-controls">
+<button id="mushafPlayBtn" onclick="toggleMushafScroll()"><i class="fa-solid fa-play"></i> প্লে</button>
+<button onclick="scrollMushafTop()"><i class="fa-solid fa-arrow-up"></i> শুরুতে</button>
+<span style="font-size:.8rem;color:var(--text-dark);">স্পিড:</span>
+<input type="range" id="mushafSpeed" min="1" max="10" value="3">
+</div>
+<div class="mushaf-scroll" id="mushafScroll"><p style="text-align:center;color:#6b7280;">সূরা নির্বাচন করুন...</p></div>
+</div>
+
+<!-- ========== ZAKAT CALCULATOR ========== -->
+<div id="zakat-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">🕌 যাকাত ক্যালকুলেটর</h3>
+<div class="form-box">
+<div class="form-group"><label>💵 নগদ টাকা (৳)</label><input type="number" id="zk_cash" value="0" oninput="calcZakat()"></div>
+<div class="form-group"><label>🏦 ব্যাংকে জমা (৳)</label><input type="number" id="zk_bank" value="0" oninput="calcZakat()"></div>
+<div class="form-group"><label>🥇 স্বর্ণ (গ্রাম) — বর্তমান মূল্য সহ</label><input type="number" id="zk_gold_g" value="0" oninput="calcZakat()"><input type="number" id="zk_gold_rate" value="0" placeholder="প্রতি গ্রামের দাম (৳)" style="margin-top:6px;" oninput="calcZakat()"></div>
+<div class="form-group"><label>🥈 রুপা (গ্রাম) — বর্তমান মূল্য সহ</label><input type="number" id="zk_silver_g" value="0" oninput="calcZakat()"><input type="number" id="zk_silver_rate" value="0" placeholder="প্রতি গ্রামের দাম (৳)" style="margin-top:6px;" oninput="calcZakat()"></div>
+<div class="form-group"><label>🏪 ব্যবসায়িক পণ্যের মূল্য (৳)</label><input type="number" id="zk_business" value="0" oninput="calcZakat()"></div>
+<div class="form-group"><label>📥 প্রযোজ্য পাওনা (৳)</label><input type="number" id="zk_receivable" value="0" oninput="calcZakat()"></div>
+<div class="form-group"><label>➕ অন্যান্য যাকাতযোগ্য সম্পদ (৳)</label><input type="number" id="zk_other" value="0" oninput="calcZakat()"></div>
+<div class="form-group"><label>📤 পরিশোধযোগ্য দায় (৳)</label><input type="number" id="zk_liability" value="0" oninput="calcZakat()"></div>
+<div class="form-group"><label>নিসাব (স্বর্ণ ৮৭.৪৮ গ্রাম / রুপা ৬১২.৩৬ গ্রাম)</label>
+<select id="zk_nisab_type" class="filter-select" onchange="calcZakat()">
+<option value="silver">রুপার নিসাব (সাধারণত প্রযোজ্য)</option>
+<option value="gold">স্বর্ণের নিসাব</option>
+</select>
+</div>
+<button class="btn-primary" onclick="calcZakat()">হিসাব করুন</button>
+</div>
+<div id="zakatResult"></div>
+</div>
+
+<!-- ========== AGE CALCULATOR ========== -->
+<div id="age-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">🎂 বয়স ক্যালকুলেটর</h3>
+<div class="form-box">
+<div class="form-group"><label>জন্ম তারিখ</label><input type="date" id="birthDate"></div>
+<button class="btn-primary" onclick="calcAge()">বয়স হিসাব করুন</button>
+</div>
+<div id="ageResult"></div>
+</div>
+
+<!-- ========== COMPASS ========== -->
+<div id="compass-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">🧭 কিবলা কম্পাস</h3>
+<div class="compass-wrap">
+<button class="btn-primary" id="enableCompassBtn" style="width:auto;padding:10px 20px;margin-bottom:10px;" onclick="enableCompass()"><i class="fa-solid fa-compass"></i> কম্পাস চালু করুন</button>
+<div id="compassCircle" class="compass-circle" style="display:none;">
+<div class="dir n">N</div><div class="dir s">S</div><div class="dir e">E</div><div class="dir w">W</div>
+<div class="compass-kaaba"><i class="fa-solid fa-kaaba"></i></div>
+<div class="compass-qibla-arrow" id="qiblaArrow"></div>
+<div class="compass-needle" id="compassNeedle"></div>
+</div>
+<p id="compassDegree" style="margin-top:10px;font-weight:700;color:var(--primary-green);">-</p>
+<p id="qiblaInfo" class="compass-info">লোকেশন ও কম্পাস দুটোই প্রয়োজন</p>
+<p id="compassCalib" class="compass-info" style="font-size:.75rem;color:#6b7280;">💡 কম্পাস সঠিক না হলে ফোনটি ৮ আকৃতিতে ঘুরিয়ে ক্যালিব্রেট করুন।</p>
+</div>
+</div>
+
+<!-- ========== NOTIFICATIONS PAGE ========== -->
+<div id="notif-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">🔔 ইসলামিক নোটিফিকেশন</h3>
+<div class="form-box">
+<p style="font-size:.85rem;color:#6b7280;margin-bottom:10px;">আপনার পছন্দের ক্যাটাগরি চালু রাখুন।</p>
+<div id="notifSettingsList"></div>
+</div>
+<h3 class="section-title"><i class="fa-solid fa-inbox"></i> সাম্প্রতিক বার্তা</h3>
+<div id="notifList"><p style="text-align:center;color:#6b7280;padding:20px;">লোড হচ্ছে...</p></div>
+</div>
+
+<!-- ========== CALENDAR ========== -->
+<div id="calendar-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">📅 ইসলামিক ক্যালেন্ডার</h3>
+<div style="background:var(--card-bg);border-radius:18px;padding:16px;box-shadow:var(--shadow);">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
+<button onclick="changeMonth(-1)" style="background:var(--light-green);border:none;color:var(--primary-green);width:36px;height:36px;border-radius:50%;cursor:pointer;"><i class="fa-solid fa-chevron-left"></i></button>
+<span id="calendarMonthYear" style="font-weight:700;color:var(--primary-green);font-size:1rem;">লোড হচ্ছে...</span>
+<button onclick="changeMonth(1)" style="background:var(--light-green);border:none;color:var(--primary-green);width:36px;height:36px;border-radius:50%;cursor:pointer;"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+<div id="calendarGrid" class="cal-grid-7"></div>
+<p style="text-align:center;margin-top:15px;font-size:.9rem;color:var(--accent-green);font-weight:700;" id="hijriDateDisplay">লোড হচ্ছে...</p>
+</div>
+</div>
+
+<!-- ========== CALCULATOR ========== -->
+<div id="calculator-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">ক্যালকুলেটর</h3>
+<div class="form-box" style="padding:10px;">
+<div id="calcDisplay" style="width:100%;height:60px;background:var(--bg-color);border-radius:10px;margin-bottom:15px;font-size:2rem;text-align:right;padding:10px;border:1px solid #ccc;color:var(--text-dark);overflow:hidden;">0</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+<button onclick="calcClear()" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#fca5a5;cursor:pointer;font-weight:bold;">C</button>
+<button onclick="calcBackspace()" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:var(--light-green);color:var(--primary-green);cursor:pointer;font-weight:bold;">⌫</button>
+<button onclick="calcAppend('/')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:var(--light-green);color:var(--primary-green);cursor:pointer;font-weight:bold;">/</button>
+<button onclick="calcAppend('*')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:var(--light-green);color:var(--primary-green);cursor:pointer;font-weight:bold;">×</button>
+<button onclick="calcAppend('7')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">7</button>
+<button onclick="calcAppend('8')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">8</button>
+<button onclick="calcAppend('9')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">9</button>
+<button onclick="calcAppend('-')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:var(--light-green);color:var(--primary-green);cursor:pointer;font-weight:bold;">-</button>
+<button onclick="calcAppend('4')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">4</button>
+<button onclick="calcAppend('5')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">5</button>
+<button onclick="calcAppend('6')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">6</button>
+<button onclick="calcAppend('+')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:var(--light-green);color:var(--primary-green);cursor:pointer;font-weight:bold;">+</button>
+<button onclick="calcAppend('1')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">1</button>
+<button onclick="calcAppend('2')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">2</button>
+<button onclick="calcAppend('3')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">3</button>
+<button onclick="calcEvaluate()" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:var(--accent-green);color:#fff;cursor:pointer;font-weight:bold;grid-column:span 2;">=</button>
+<button onclick="calcAppend('0')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">0</button>
+<button onclick="calcAppend('.')" style="padding:15px;font-size:1.2rem;border-radius:10px;border:none;background:#e5e7eb;cursor:pointer;font-weight:bold;">.</button>
+</div>
+</div>
+</div>
+
+<!-- ========== NOTEBOOK ========== -->
+<div id="notebook-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">নোটবুক</h3>
+<div class="form-box"><div class="form-group"><label>নোট:</label><textarea id="noteInput" rows="4"></textarea></div><button class="btn-primary" onclick="saveNote()">সেভ করুন</button></div>
+<div id="noteList" class="form-box"></div>
+</div>
+
+<!-- ========== MESSAGING ========== -->
+<div id="messaging-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">মেসেজ</h3>
+<div class="form-box" id="messageFormBox">
+<div class="form-group"><label>নাম:</label><input type="text" id="msgSenderName" placeholder="আপনার নাম"></div>
+<div class="form-group"><label>দাখেলা নম্বর:</label><input type="text" id="msgSenderRoll" placeholder="দাখেলা নম্বর"></div>
+<button class="btn-primary" onclick="verifyAndShowChat()">চ্যাট দেখুন</button>
+</div>
+<div id="chatBox" class="hidden">
+<div style="background:var(--card-bg);border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;height:400px;overflow:hidden;">
+<div style="background:var(--primary-green);color:#fff;padding:12px 15px;font-weight:600;"><i class="fa-solid fa-comments"></i> সাধারণ চ্যাট</div>
+<div id="chatMessages" style="flex:1;padding:15px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;background:var(--bg-color);"><p style="text-align:center;">লোড হচ্ছে...</p></div>
+<div style="display:flex;padding:10px;background:var(--card-bg);border-top:1px solid #e5e7eb;gap:8px;">
+<input type="text" id="chatInput" placeholder="মেসেজ লিখুন..." onkeypress="if(event.key==='Enter') sendMessage()" style="flex:1;padding:10px;border-radius:20px;border:1px solid #d1d5db;outline:none;background:var(--bg-color);color:var(--text-dark);">
+<button onclick="sendMessage()" style="width:44px;height:44px;border-radius:50%;background:var(--accent-green);color:#fff;border:none;cursor:pointer;"><i class="fa-solid fa-paper-plane"></i></button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ========== AMAL TRACKER ========== -->
+<div id="amal-tracker-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">আমল ট্রাকার</h3>
+<div class="form-box text-center">
+<p style="font-size:.85rem;color:#6b7280;margin-bottom:5px;">আজকের অগ্রগতি</p>
+<div style="width:100%;background:#e5e7eb;height:10px;border-radius:5px;margin-bottom:10px;overflow:hidden;"><div id="amalProgressBar" style="height:100%;background:var(--accent-green);width:0;transition:width .3s;"></div></div>
+<p id="amalProgressText" style="font-size:.85rem;color:var(--primary-green);font-weight:700;">০ / ০ আমল সম্পন্ন</p>
+</div>
+<div id="amalGroupsContainer"></div>
+<h3 class="section-title"><i class="fa-solid fa-chart-bar"></i> রিপোর্ট</h3>
+<div class="form-box">
+<div class="report-tabs">
+<div class="report-tab active" onclick="switchReport('daily', this)">দৈনিক</div>
+<div class="report-tab" onclick="switchReport('weekly', this)">সাপ্তাহিক</div>
+<div class="report-tab" onclick="switchReport('monthly', this)">মাসিক</div>
+<div class="report-tab" onclick="switchReport('yearly', this)">বাৎসরিক</div>
+</div>
+<div id="reportContent"></div>
+</div>
+</div>
+
+<!-- ========== DEVELOPER ========== -->
+<div id="developer-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+<h3 class="section-title" style="padding:0;">👨‍💻 ডেভেলপার</h3>
+<div class="form-box text-center">
+<h3 style="color:var(--primary-green);">Tanvir Hasan Mahin</h3>
+<p style="color:#6b7280;margin-bottom:20px;">অ্যাপ ডেভেলপার</p>
+<a href="https://wa.me/8801570243301" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;padding:14px;border-radius:12px;text-decoration:none;margin-bottom:10px;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp: 01570243301</a>
+<a href="https://www.facebook.com/Tanvirulislam24" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#1877F2;color:#fff;padding:14px;border-radius:12px;text-decoration:none;font-weight:600;"><i class="fa-brands fa-facebook"></i> Facebook</a>
+</div>
+</div>
+
+<!-- ========== ADMIN ========== -->
+<div id="admin-page" class="page-content">
+<button class="back-btn" onclick="switchPage('home-page')"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+
+<div id="admin-login-box" class="form-box text-center">
+<h3 style="color:var(--primary-green);margin-bottom:15px;"><i class="fa-solid fa-user-shield"></i> এডমিন লগইন</h3>
+<div class="form-group"><input type="tel" id="adminPhone" placeholder="📞 ফোন নাম্বার" style="text-align:center;"></div>
+<div class="form-group"><input type="password" id="adminPass" placeholder="🔒 পাসওয়ার্ড" style="text-align:center;"></div>
+<button class="btn-primary" onclick="loginAdmin()">প্রবেশ করুন</button>
+</div>
+
+<div id="admin-dash" class="hidden">
+<div class="form-box text-center" style="background:linear-gradient(135deg,var(--primary-green),var(--accent-green));color:#fff;">
+<h3><i class="fa-solid fa-shield-halved"></i> এডমিন কন্ট্রোল প্যানেল</h3>
+</div>
+
+<div class="admin-section">
+<h4><i class="fa-solid fa-chart-line"></i> পরিসংখ্যান</h4>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+<div style="background:var(--light-green);padding:12px;border-radius:10px;text-align:center;"><div style="font-size:1.4rem;font-weight:700;color:var(--accent-green);" id="statTotalStudents">০</div><div style="font-size:.75rem;color:#6b7280;">অনুমোদিত ছাত্র</div></div>
+<div style="background:#fef3c7;padding:12px;border-radius:10px;text-align:center;"><div style="font-size:1.4rem;font-weight:700;color:#d97706;" id="statPending">০</div><div style="font-size:.75rem;color:#6b7280;">পেন্ডিং</div></div>
+</div>
+</div>
+
+<div class="admin-section">
+<h4><i class="fa-solid fa-building-columns"></i> মাদ্রাসার তথ্য</h4>
+<div class="form-group"><label>নাম:</label><input type="text" id="editMadrasaName"></div>
+<div class="form-group"><label>আরবি নাম:</label><input type="text" id="editMadrasaArabic"></div>
+<div class="form-group"><label>আরবি ক্যালিগ্রাফি ছবির URL:</label><input type="url" id="editMadrasaArabicImg"></div>
+<div class="form-group"><label>ঠিকানা:</label><input type="text" id="editMadrasaAddress"></div>
+<div class="form-group"><label>লোগো URL:</label><input type="url" id="editMadrasaLogo"></div>
+<button class="btn-primary" onclick="saveMadrasaInfo()">💾 সেভ করুন</button>
+</div>
+
+<div class="admin-section">
+<h4><i class="fa-solid fa-share-nodes"></i> সোশ্যাল লিংক</h4>
+<div class="form-group"><label>Facebook:</label><input type="url" id="editSocialFb"></div>
+<div class="form-group"><label>YouTube:</label><input type="url" id="editSocialYt"></div>
+<div class="form-group"><label>WhatsApp:</label><input type="url" id="editSocialWa"></div>
+<div class="form-group"><label>Telegram:</label><input type="url" id="editSocialTg"></div>
+<div class="form-group"><label>ই-মেইল:</label><input type="email" id="editSocialEmail"></div>
+<button class="btn-primary" onclick="saveSocialLinks()">💾 সেভ করুন</button>
+</div>
+
+<div class="admin-section">
+<h4><i class="fa-solid fa-bullhorn"></i> ঘোষণা ও কাউন্টডাউন</h4>
+<div class="form-group"><label>ঘোষণার লেখা:</label><textarea id="editAdText" rows="3"></textarea></div>
+<div class="form-group"><label>কাউন্টডাউন তারিখ:</label><input type="date" id="editAdDate"></div>
+<button class="btn-primary" onclick="saveAdSettings()">💾 সেভ করুন</button>
+</div>
+
+<div class="admin-section">
+<h4><i class="fa-solid fa-clock"></i> নামাজের সময়</h4>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+<div class="form-group"><label>ফজর:</label><input type="text" id="editFajr"></div>
+<div class="form-group"><label>জোহর:</label><input type="text" id="editDhuhr"></div>
+<div class="form-group"><label>আসর:</label><input type="text" id="editAsr"></div>
+<div class="form-group"><label>মাগরিব:</label><input type="text" id="editMaghrib"></div>
+<div class="form-group" style="grid-column:span 2;"><label>এশা:</label><input type="text" id="editIsha"></div>
+</div>
+<button class="btn-primary" onclick="saveNamazTimes()">💾 সেভ করুন</button>
+</div>
+
+<!-- ===== ABOUT (পরিচিতি) MANAGER ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-users-rectangle"></i> পরিচিতি বিভাগ</h4>
+<div style="background:var(--bg-color);padding:12px;border-radius:10px;margin-bottom:12px;">
+<div class="form-group"><label>ক্যাটাগরি:</label>
+<select id="aboutCat" class="filter-select">
+<option value="founder">প্রতিষ্ঠাতা</option>
+<option value="mutawalli">মোতাওয়াল্লী</option>
+<option value="principal">প্রিন্সিপাল</option>
+<option value="shaikhul_hadith">শাইখুল হাদীস ও মুহাদ্দিস</option>
+<option value="mudarris">মুদাররিসবৃন্দ</option>
+<option value="staff">স্টাফবৃন্দ</option>
+</select>
+</div>
+<div class="form-group"><label>নাম:</label><input type="text" id="aboutName"></div>
+<div class="form-group"><label>পদবি:</label><input type="text" id="aboutRole"></div>
+<div class="form-group"><label>ছবির URL:</label><input type="url" id="aboutPhoto"></div>
+<div class="form-group"><label>সংক্ষিপ্ত পরিচিতি:</label><textarea id="aboutBio" rows="3"></textarea></div>
+<div class="form-group"><label>মোবাইল:</label><input type="tel" id="aboutPhone"></div>
+<button class="btn-primary" onclick="addAboutPerson()">💾 যোগ করুন</button>
+<button class="btn-primary" style="background:#6b7280;margin-top:5px;" onclick="clearAboutForm()">🔄 রিসেট</button>
+</div>
+<div id="aboutListAdmin"></div>
+</div>
+
+<!-- ===== GALLERY MANAGER ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-images"></i> গ্যালারি</h4>
+<div style="background:var(--bg-color);padding:12px;border-radius:10px;margin-bottom:12px;">
+<div class="form-group"><label>ক্যাটাগরি:</label>
+<select id="galCat" class="filter-select">
+<option value="campus">ক্যাম্পাস</option>
+<option value="education">শিক্ষা কার্যক্রম</option>
+<option value="dawra">দাওরায়ে হাদীস</option>
+<option value="mahfil">মাহফিল ও অনুষ্ঠান</option>
+<option value="moments">স্মরণীয় মুহূর্ত</option>
+</select>
+</div>
+<div class="form-group"><label>ছবির URL:</label><input type="url" id="galUrl"></div>
+<div class="form-group"><label>ক্যাপশন:</label><input type="text" id="galCaption"></div>
+<button class="btn-primary" onclick="addGalleryImage()">💾 যোগ করুন</button>
+</div>
+<div id="galleryListAdmin"></div>
+</div>
+
+<!-- ===== EDUCATION MANAGER ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-graduation-cap"></i> শিক্ষা কার্যক্রম</h4>
+<div style="background:var(--bg-color);padding:12px;border-radius:10px;margin-bottom:12px;">
+<div class="form-group"><label>বিভাগ:</label>
+<select id="eduDiv" class="filter-select">
+<option value="hifz">হিফজ বিভাগ</option>
+<option value="kitab">কিতাব বিভাগ</option>
+<option value="najera">নাজেরা বিভাগ</option>
+<option value="tajweed">তাজবিদ বিভাগ</option>
+<option value="ifta">ইফতা বিভাগ</option>
+</select>
+</div>
+<div class="form-group"><label>শিরোনাম:</label><input type="text" id="eduTitle"></div>
+<div class="form-group"><label>সংক্ষিপ্ত পরিচিতি:</label><textarea id="eduIntro" rows="3"></textarea></div>
+<div class="form-group"><label>পাঠদানের উদ্দেশ্য:</label><textarea id="eduGoal" rows="2"></textarea></div>
+<div class="form-group"><label>শিক্ষাক্রম:</label><textarea id="eduCurriculum" rows="3"></textarea></div>
+<div class="form-group"><label>ভর্তি তথ্য:</label><textarea id="eduAdmission" rows="2"></textarea></div>
+<div class="form-group"><label>শিক্ষকদের তথ্য:</label><textarea id="eduTeachers" rows="2"></textarea></div>
+<div class="form-group"><label>ছবির URL:</label><input type="url" id="eduImage"></div>
+<button class="btn-primary" onclick="saveEducation()">💾 সেভ করুন</button>
+</div>
+<div id="eduListAdmin"></div>
+</div>
+
+<!-- ===== CONTACT MANAGER ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-address-book"></i> যোগাযোগ ও ঠিকানা</h4>
+<div class="form-group"><label>সম্পূর্ণ ঠিকানা:</label><textarea id="ctAddress" rows="2"></textarea></div>
+<div class="form-group"><label>মোবাইল ১:</label><input type="tel" id="ctPhone1"></div>
+<div class="form-group"><label>মোবাইল ২:</label><input type="tel" id="ctPhone2"></div>
+<div class="form-group"><label>ই-মেইল:</label><input type="email" id="ctEmail"></div>
+<div class="form-group"><label>গুগল ম্যাপ URL:</label><input type="url" id="ctMap"></div>
+<div class="form-group"><label>অফিস সময়সূচি:</label><textarea id="ctHours" rows="2"></textarea></div>
+<button class="btn-primary" onclick="saveContact()">💾 সেভ করুন</button>
+</div>
+
+<!-- ===== NOTIFICATION MANAGER ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-bell"></i> ইসলামিক নোটিফিকেশন</h4>
+<div style="background:var(--bg-color);padding:12px;border-radius:10px;margin-bottom:12px;">
+<div class="form-group"><label>ক্যাটাগরি:</label>
+<select id="ntfCat" class="filter-select">
+<option value="jumuah">জুমাবার</option>
+<option value="eid_fitr">ঈদুল ফিতর</option>
+<option value="eid_adha">ঈদুল আজহা</option>
+<option value="ramadan">রমজান</option>
+<option value="ashura">আশুরা</option>
+<option value="arafah">আরাফা</option>
+<option value="laylatul_qadr">শবে কদর</option>
+<option value="daily">দৈনিক আয়াত ও হাদিস</option>
+<option value="general">সাধারণ</option>
+</select>
+</div>
+<div class="form-group"><label>শিরোনাম:</label><input type="text" id="ntfTitle"></div>
+<div class="form-group"><label>আরবি পাঠ:</label><textarea id="ntfArabic" rows="2" style="direction:rtl;font-family:'Amiri',serif;"></textarea></div>
+<div class="form-group"><label>বাংলা অনুবাদ / বার্তা:</label><textarea id="ntfBangla" rows="3"></textarea></div>
+<div class="form-group"><label>রেফারেন্স:</label><input type="text" id="ntfRef"></div>
+<div class="form-group"><label>প্রকাশের তারিখ:</label><input type="date" id="ntfDate"></div>
+<button class="btn-primary" onclick="addNotification()">💾 যোগ করুন</button>
+</div>
+<div id="notifListAdmin"></div>
+</div>
+
+<!-- ===== MENU MANAGER ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-folder-tree"></i> মেনু ম্যানেজার</h4>
+<div style="background:var(--bg-color);padding:12px;border-radius:10px;margin-bottom:12px;">
+<div class="form-group"><label>Parent:</label><select id="menuParent" class="filter-select"><option value="main">-- প্রধান মেনু --</option></select></div>
+<div class="form-group"><label>নাম:</label><input type="text" id="menuName"></div>
+<div class="form-group"><label>আইকন:</label><input type="text" id="menuIcon" value="fa-solid fa-circle"></div>
+<div class="form-group"><label>ছবির URL:</label><input type="url" id="menuImage"></div>
+<div class="form-group"><label>তথ্য:</label><textarea id="menuDesc" rows="3"></textarea></div>
+<button class="btn-primary" onclick="addMenuItem()">💾 যোগ করুন</button>
+<button class="btn-primary" style="background:#6b7280;margin-top:5px;" onclick="resetMenuForm()">🔄 রিসেট</button>
+</div>
+<div id="menuTreeView"></div>
+</div>
+
+<!-- ===== STUDENTS ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-clock-rotate-left"></i> পেন্ডিং ছাত্র</h4>
+<div id="pendingContainer"><p style="font-size:.85rem;color:#777;">লোড হচ্ছে...</p></div>
+</div>
+
+<div class="admin-section">
+<h4><i class="fa-solid fa-users-gear"></i> সকল ছাত্র</h4>
+<div style="margin-bottom:10px;"><input type="text" id="adminSearchStudent" placeholder="ছাত্র খুঁজুন..." class="filter-select" onkeyup="renderAdminStudents()"></div>
+<div id="adminStudentList" style="max-height:400px;overflow-y:auto;"><p style="font-size:.85rem;color:#777;">লোড হচ্ছে...</p></div>
+</div>
+
+<!-- ===== REGISTERED USERS ===== -->
+<div class="admin-section">
+<h4><i class="fa-solid fa-user-group"></i> নিবন্ধিত ব্যবহারকারী</h4>
+<div id="registeredUsersList"><p style="font-size:.85rem;color:#777;">লোড হচ্ছে...</p></div>
+</div>
+
+<div class="form-box text-center">
+<button class="btn-primary btn-danger" onclick="logoutAdmin()"><i class="fa-solid fa-right-from-bracket"></i> লগআউট</button>
+</div>
+</div>
+</div>
+
+<!-- ========== BOTTOM NAV ========== -->
+<div class="bottom-nav">
+<div class="nav-item active" onclick="switchPage('home-page', this)"><i class="fa-solid fa-house"></i>হোম</div>
+<div class="nav-item" onclick="openDivision('সকল ছাত্র', this)"><i class="fa-solid fa-users"></i>ছাত্রবৃন্দ</div>
+<div class="nav-item" onclick="switchPage('amal-tracker-page', this)"><i class="fa-solid fa-clipboard-check"></i>আমল</div>
+<div class="nav-item" onclick="switchPage('quran-page', this)"><i class="fa-solid fa-book-open"></i>কুরআন</div>
+<div class="nav-item" onclick="switchPage('admin-page', this)"><i class="fa-solid fa-user-shield"></i>অ্যাডমিন</div>
+</div>
+
+</div><!-- /mainApp -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script>
+/* ============ FIREBASE ============ */
+const firebaseConfig = {
+apiKey: "AIzaSyBUUinEorTd8yBMzwe91rVqtkM0ALNq5uQ",
+authDomain: "madrasaapp-5defc.firebaseapp.com",
+projectId: "madrasaapp-5defc",
+storageBucket: "madrasaapp-5defc.firebasestorage.app",
+messagingSenderId: "367789783808",
+appId: "1:367789783808:web:408bacfbd0355619211e5"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+const auth = firebase.auth();
+const ADMIN_PHONE = "01570243301";
+const ADMIN_PASS = "Mahin6723@";
+
+/* ============ GLOBAL STATE ============ */
+let currentUser = null;
+let currentUserProfile = null;
+let allStudents = [];
+let currentDivision = '';
+let currentLat = 23.7104, currentLon = 90.4125;
+let currentQiblaBearing = 293;
+let deviceHeading = 0;
+let compassActive = false;
+let menuData = {};
+let aboutData = {}, galleryData = {}, educationData = {}, contactData = {}, notifData = {};
+let currentChatUser = null;
+let currentReport = 'daily';
+let authMode = 'login';
+let notes = [];
+let amalHistory = {};
+let currentSurah = null;
+let mushafScrollTimer = null;
+
+const NAMAZ_ORDER = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
+const NAMAZ_BN = { fajr: 'ফজর', dhuhr: 'জোহর', asr: 'আসর', maghrib: 'মাগরিব', isha: 'ইশা' };
+let namazTimesToday = { fajr: '৪:৪৫', dhuhr: '১২:০৫', asr: '৪:১৫', maghrib: '৫:৫০', isha: '৭:০৫' };
+const toBn = (n) => n.toString().replace(/[0-9]/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+const toEn = (s) => s.replace(/[০-৯]/g, d => '০১২৩৪৫৬৭৮৯'.indexOf(d));
+
+/* ============ BD DATA (unchanged) ============ */
+const bdData = {
+"ঢাকা":{"ঢাকা":["ধানমন্ডি","মিরপুর","উত্তরা","মোহাম্মদপুর","তেজগাঁও","রমনা","সূত্রাপুর","লালবাগ","কোতোয়ালি","পল্টন","গুলশান","বনানী","বাড্ডা","খিলগাঁও","মুগদা","যাত্রাবাড়ী","ডেমরা","সাভার","ধামরাই","কেরানীগঞ্জ","নবাবগঞ্জ","দোহার"],"গাজীপুর":["গাজীপুর সদর","কালিয়াকৈর","কাপাসিয়া","শ্রীপুর","কালীগঞ্জ","টঙ্গী"],"নারায়ণগঞ্জ":["নারায়ণগঞ্জ সদর","বন্দর","আড়াইহাজার","সোনারগাঁও","রূপগঞ্জ","সিদ্ধিরগঞ্জ"],"টাঙ্গাইল":["টাঙ্গাইল সদর","সখীপুর","বাসাইল","মধুপুর","ঘাটাইল","কালিহাতী","নাগরপুর","মির্জাপুর","গোপালপুর","ভূঞাপুর","দেলদুয়ার","ধনবাড়ী"],"কিশোরগঞ্জ":["কিশোরগঞ্জ সদর","ভৈরব","কটিয়াদী","পাকুন্দিয়া","হোসেনপুর","বাজিতপুর","কুলিয়ারচর","ইটনা","মিঠামইন","অষ্টগ্রাম","নিকলী","তাড়াইল","করিমগঞ্জ"],"মানিকগঞ্জ":["মানিকগঞ্জ সদর","সাটুরিয়া","শিবালয়","ঘিওর","দৌলতপুর","সিংগাইর","হরিরামপুর"],"মুন্সিগঞ্জ":["মুন্সিগঞ্জ সদর","শ্রীনগর","সিরাজদিখান","লৌহজং","গজারিয়া","টংগীবাড়ী"],"নরসিংদী":["নরসিংদী সদর","পলাশ","শিবপুর","রায়পুরা","বেলাবো","মনোহরদী"],"ফরিদপুর":["ফরিদপুর সদর","বোয়ালমারী","আলফাডাঙ্গা","মধুখালী","ভাঙ্গা","সদরপুর","চরভদ্রাসন","নগরকান্দা","সালথা"],"রাজবাড়ী":["রাজবাড়ী সদর","গোয়ালন্দ","পাংশা","বালিয়াকান্দি","কালুখালী"],"গোপালগঞ্জ":["গোপালগঞ্জ সদর","টুঙ্গিপাড়া","কাশিয়ানী","কোটালীপাড়া","মুকসুদপুর"],"মাদারীপুর":["মাদারীপুর সদর","শিবচর","কালকিনি","রাজৈর","ডাসার"]},
+"চট্টগ্রাম":{"চট্টগ্রাম":["চট্টগ্রাম সদর","পটিয়া","সীতাকুণ্ড","মিরসরাই","হাটহাজারী","রাউজান","রাঙ্গুনিয়া","বোয়ালখালী","আনোয়ারা","বাঁশখালী","লোহাগাড়া","চন্দনাইশ","সাতকানিয়া","ফটিকছড়ি","সন্দ্বীপ"],"কক্সবাজার":["কক্সবাজার সদর","চকরিয়া","টেকনাফ","উখিয়া","রামু","মহেশখালী","কুতুবদিয়া","পেকুয়া"],"কুমিল্লা":["কুমিল্লা সদর","দেবিদ্বার","বরুড়া","ব্রাহ্মণপাড়া","চান্দিনা","চৌদ্দগ্রাম","দাউদকান্দি","হোমনা","লাকসাম","মুরাদনগর","নাঙ্গলকোট","মনোহরগঞ্জ","মেঘনা","তিতাস","বুড়িচং","লালমাই"],"ব্রাহ্মণবাড়িয়া":["ব্রাহ্মণবাড়িয়া সদর","আশুগঞ্জ","নাসিরনগর","সরাইল","বাঞ্ছারামপুর","কসবা","নবীনগর","আখাউড়া","বিজয়নগর"],"রাঙ্গামাটি":["রাঙ্গামাটি সদর","কাপ্তাই","কাউখালী","বাঘাইছড়ি","বরকল","জুরাছড়ি","লংগদু","নানিয়ারচর","রাজস্থলী"],"নোয়াখালী":["নোয়াখালী সদর","বেগমগঞ্জ","চাটখিল","কোম্পানীগঞ্জ","হাতিয়া","সেনবাগ","সোনাইমুড়ী","সুবর্ণচর","কবিরহাট"],"ফেনী":["ফেনী সদর","ছাগলনাইয়া","দাগনভূঞা","পরশুরাম","সোনাগাজী","ফুলগাজী"],"লক্ষ্মীপুর":["লক্ষ্মীপুর সদর","রায়পুর","রামগঞ্জ","রামগতি","কমলনগর"],"চাঁদপুর":["চাঁদপুর সদর","হাজীগঞ্জ","কচুয়া","শাহরাস্তি","ফরিদগঞ্জ","হাইমচর","মতলব উত্তর","মতলব দক্ষিণ"],"বান্দরবান":["বান্দরবান সদর","আলীকদম","নাইক্ষ্যংছড়ি","রোয়াংছড়ি","লামা","রুমা","থানচি"]},
+"রাজশাহী":{"রাজশাহী":["রাজশাহী সদর","বাঘা","চারঘাট","দুর্গাপুর","গোদাগাড়ী","মোহনপুর","পবা","তানোর","বাগমারা"],"নাটোর":["নাটোর সদর","সিংড়া","বড়াইগ্রাম","বাগাতিপাড়া","লালপুর","গুরুদাসপুর","নলডাঙ্গা"],"নওগাঁ":["নওগাঁ সদর","আত্রাই","বদলগাছী","ধামইরহাট","মান্দা","মহাদেবপুর","নিয়ামতপুর","পত্নীতলা","পোরশা","রাণীনগর","সাপাহার"],"চাঁপাইনবাবগঞ্জ":["চাঁপাইনবাবগঞ্জ সদর","শিবগঞ্জ","গোমস্তাপুর","নাচোল","ভোলাহাট"],"পাবনা":["পাবনা সদর","ঈশ্বরদী","ভাঙ্গুড়া","চাটমোহর","ফরিদপুর","সাঁথিয়া","সুজানগর","আটঘরিয়া","বেড়া"],"সিরাজগঞ্জ":["সিরাজগঞ্জ সদর","বেলকুচি","চৌহালী","কামারখন্দ","কাজীপুর","রায়গঞ্জ","শাহজাদপুর","তাড়াশ","উল্লাপাড়া"],"বগুড়া":["বগুড়া সদর","আদমদীঘি","ধুনট","দুপচাঁচিয়া","গাবতলী","কাহালু","নন্দীগ্রাম","সারিয়াকান্দি","শাজাহানপুর","শেরপুর","শিবগঞ্জ","সোনাতলা"],"জয়পুরহাট":["জয়পুরহাট সদর","আক্কেলপুর","কালাই","ক্ষেতলাল","পাঁচবিবি"]},
+"খুলনা":{"খুলনা":["খুলনা সদর","বটিয়াঘাটা","দাকোপ","ডুমুরিয়া","দিঘলিয়া","কয়রা","পাইকগাছা","ফুলতলা","রূপসা","তেরখাদা"],"বাগেরহাট":["বাগেরহাট সদর","চিতলমারী","ফকিরহাট","কচুয়া","মোংলা","মোড়েলগঞ্জ","মোল্লাহাট","রামপাল","শরণখোলা"],"সাতক্ষীরা":["সাতক্ষীরা সদর","আশাশুনি","দেবহাটা","কালীগঞ্জ","কলারোয়া","শ্যামনগর","তালা"],"যশোর":["যশোর সদর","অভয়নগর","বাঘারপাড়া","চৌগাছা","ঝিকরগাছা","কেশবপুর","মণিরামপুর","শার্শা"],"ঝিনাইদহ":["ঝিনাইদহ সদর","হরিণাকুণ্ডু","কালীগঞ্জ","কোটচাঁদপুর","মহেশপুর","শৈলকুপা"],"মাগুরা":["মাগুরা সদর","শালিখা","শ্রীপুর","মহম্মদপুর"],"নড়াইল":["নড়াইল সদর","লোহাগড়া","কালিয়া"],"কুষ্টিয়া":["কুষ্টিয়া সদর","কুমারখালী","খোকসা","মিরপুর","ভেড়ামারা","দৌলতপুর"],"চুয়াডাঙ্গা":["চুয়াডাঙ্গা সদর","আলমডাঙ্গা","দামুড়হুদা","জীবননগর"]},
+"বরিশাল":{"বরিশাল":["বরিশাল সদর","বাকেরগঞ্জ","বাবুগঞ্জ","বানারীপাড়া","গৌরনদী","হিজলা","মেহেন্দিগঞ্জ","মুলাদী","উজিরপুর","আগৈলঝাড়া"],"পটুয়াখালী":["পটুয়াখালী সদর","বাউফল","দশমিনা","গলাচিপা","কলাপাড়া","মির্জাগঞ্জ","রাঙ্গাবালী"],"ভোলা":["ভোলা সদর","বোরহানউদ্দিন","চরফ্যাশন","দৌলতখান","লালমোহন","মনপুরা","তজুমদ্দিন"],"পিরোজপুর":["পিরোজপুর সদর","ভান্ডারিয়া","কাউখালী","মঠবাড়িয়া","নাজিরপুর","নেছারাবাদ","ইন্দুরকানী"],"বরগুনা":["বরগুনা সদর","আমতলী","বামনা","বেতাগী","পাথরঘাটা","তালতলী"],"ঝালকাঠি":["ঝালকাঠি সদর","কাঠালিয়া","নলছিটি","রাজাপুর"]},
+"সিলেট":{"সিলেট":["সিলেট সদর","বিয়ানীবাজার","বিশ্বনাথ","বালাগঞ্জ","গোলাপগঞ্জ","গোয়াইনঘাট","জৈন্তাপুর","কানাইঘাট","কোম্পানীগঞ্জ","ফেঞ্চুগঞ্জ","জকিগঞ্জ","ওসমানীনগর"],"মৌলভীবাজার":["মৌলভীবাজার সদর","বড়লেখা","কমলগঞ্জ","কুলাউড়া","রাজনগর","শ্রীমঙ্গল","জুড়ী"],"হবিগঞ্জ":["হবিগঞ্জ সদর","আজমিরীগঞ্জ","বানিয়াচং","বাহুবল","চুনারুঘাট","লাখাই","মাধবপুর","নবীগঞ্জ","শায়েস্তাগঞ্জ"],"সুনামগঞ্জ":["সুনামগঞ্জ সদর","বিশ্বম্ভরপুর","ছাতক","দিরাই","ধর্মপাশা","দোয়ারাবাজার","জগন্নাথপুর","জামালগঞ্জ","শাল্লা","তাহিরপুর","দক্ষিণ সুনামগঞ্জ"]},
+"রংপুর":{"রংপুর":["রংপুর সদর","বদরগঞ্জ","গঙ্গাচড়া","কাউনিয়া","মিঠাপুকুর","পীরগঞ্জ","পীরগাছা","তারাগঞ্জ"],"দিনাজপুর":["দিনাজপুর সদর","বিরামপুর","বীরগঞ্জ","বোচাগঞ্জ","চিরিরবন্দর","ফুলবাড়ী","ঘোড়াঘাট","হাকিমপুর","কাহারোল","খানসামা","নবাবগঞ্জ","পার্বতীপুর","বিরল"],"কুড়িগ্রাম":["কুড়িগ্রাম সদর","ভুরুঙ্গামারী","চর রাজিবপুর","চিলমারী","ফুলবাড়ী","নাগেশ্বরী","রাজারহাট","রৌমারী","উলিপুর"],"গাইবান্ধা":["গাইবান্ধা সদর","ফুলছড়ি","গোবিন্দগঞ্জ","পলাশবাড়ী","সাদুল্লাপুর","সাঘাটা","সুন্দরগঞ্জ"],"লালমনিরহাট":["লালমনিরহাট সদর","আদিতমারী","হাতীবান্ধা","কালীগঞ্জ","পাটগ্রাম"],"নীলফামারী":["নীলফামারী সদর","ডোমার","ডিমলা","জলঢাকা","কিশোরগঞ্জ","সৈয়দপুর"],"পঞ্চগড়":["পঞ্চগড় সদর","আটোয়ারী","বোদা","দেবীগঞ্জ","তেঁতুলিয়া"],"ঠাকুরগাঁও":["ঠাকুরগাঁও সদর","বালিয়াডাঙ্গী","হরিপুর","পীরগঞ্জ","রাণীশংকৈল"]},
+"ময়মনসিংহ":{"ময়মনসিংহ":["ময়মনসিংহ সদর","ভালুকা","গফরগাঁও","গৌরীপুর","হালুয়াঘাট","ঈশ্বরগঞ্জ","মুক্তাগাছা","নান্দাইল","ফুলবাড়িয়া","তারাকান্দা","ত্রিশাল","ধোবাউড়া","ফুলপুর"],"জামালপুর":["জামালপুর সদর","বকশীগঞ্জ","দেওয়ানগঞ্জ","ইসলামপুর","মাদারগঞ্জ","মেলান্দহ","সরিষাবাড়ী"],"নেত্রকোণা":["নেত্রকোণা সদর","আটপাড়া","বারহাট্টা","দুর্গাপুর","খালিয়াজুড়ি","কলমাকান্দা","কেন্দুয়া","মদন","মোহনগঞ্জ","পূর্বধলা"],"শেরপুর":["শেরপুর সদর","নকলা","নালিতাবাড়ী","শ্রীবরদী","ঝিনাইগাতী"]}
+};
+
+/* ============ 114 SURAH METADATA ============ */
+const surahNames = ["আল-ফাতিহা|الفاتحة|7","আল-বাকারা|البقرة|286","আল-ইমরান|آل عمران|200","আন-নিসা|النساء|176","আল-মায়িদা|المائدة|120","আল-আনআম|الأنعام|165","আল-আরাফ|الأعراف|206","আল-আনফাল|الأنفال|75","আত-তাওবা|التوبة|129","ইউনুস|يونس|109","হুদ|هود|123","ইউসুফ|يوسف|111","আর-রাদ|الرعد|43","ইব্রাহিম|إبراهيم|52","আল-হিজর|الحجر|99","আন-নাহল|النحل|128","আল-ইসরা|الإسراء|111","আল-কাহফ|الكهف|110","মারইয়াম|مريم|98","তা-হা|طه|135","আল-আম্বিয়া|الأنبياء|112","আল-হাজ্জ|الحج|78","আল-মুমিনুন|المؤمنون|118","আন-নূর|النور|64","আল-ফুরকান|الفرقان|77","আশ-শুআরা|الشعراء|227","আন-নামল|النمل|93","আল-কাসাস|القصص|88","আল-আনকাবুত|العنكبوت|69","আর-রূম|الروم|60","লুকমান|لقمان|34","আস-সাজদা|السجدة|30","আল-আহযাব|الأحزاب|73","সাবা|سبأ|54","ফাতির|فاطر|45","ইয়াসীন|يس|83","আস-সাফফাত|الصافات|182","সাদ|ص|88","আয-যুমার|الزمر|75","গাফির|غافر|85","ফুসসিলাত|فصلت|54","আশ-শূরা|الشورى|53","আয-যুখরুফ|الزخرف|89","আদ-দুখান|الدخان|59","আল-জাসিয়া|الجاثية|37","আল-আহকাফ|الأحقاف|35","মুহাম্মাদ|محمد|38","আল-ফাতহ|الفتح|29","আল-হুজুরাত|الحجرات|18","কাফ|ق|45","আয-যারিয়াত|الذاريات|60","আত-তূর|الطور|49","আন-নাজম|النجم|62","আল-কামার|القمر|55","আর-রাহমান|الرحمن|78","আল-ওয়াকিয়া|الواقعة|96","আল-হাদীদ|الحديد|29","আল-মুজাদালা|المجادلة|22","আল-হাশর|الحشر|24","আল-মুমতাহিনা|الممتحنة|13","আস-সাফ|الصف|14","আল-জুমুআ|الجمعة|11","আল-মুনাফিকুন|المنافقون|11","আত-তাগাবুন|التغابن|18","আত-তালাক|الطلاق|12","আত-তাহরীম|التحريم|12","আল-মুলক|الملك|30","আল-কালাম|القلم|52","আল-হাক্কা|الحاقة|52","আল-মাআরিজ|المعارج|44","নূহ|نوح|28","আল-জিন্ন|الجن|28","আল-মুযযাম্মিল|المزمل|20","আল-মুদ্দাসসির|المدثر|56","আল-কিয়ামা|القيامة|40","আল-ইনসান|الإنسان|31","আল-মুরসালাত|المرسلات|50","আন-নাবা|النبأ|40","আন-নাযিআত|النازعات|46","আবাসা|عبس|42","আত-তাকভীর|التكوير|29","আল-ইনফিতার|الانفطار|19","আল-মুতাফফিফীন|المطففين|36","আল-ইনশিকাক|الانشقاق|25","আল-বুরূজ|البروج|22","আত-তারিক|الطارق|17","আল-আলা|الأعلى|19","আল-গাশিয়া|الغاشية|26","আল-ফাজর|الفجر|30","আল-বালাদ|البلد|20","আশ-শামস|الشمس|15","আল-লাইল|الليل|21","আদ-দুহা|الضحى|11","আশ-শারহ|الشرح|8","আত-তীন|التين|8","আল-আলাক|العلق|19","আল-কাদর|القدر|5","আল-বাইয়িনা|البينة|8","আয-যিলযাল|الزلزلة|8","আল-আদিয়াত|العاديات|11","আল-কারিআ|القارعة|11","আত-তাকাসুর|التكاثر|8","আল-আসর|العصر|3","আল-হুমাযা|الهمزة|9","আল-ফীল|الفيل|5","কুরাইশ|قريش|4","আল-মাউন|الماعون|7","আল-কাউসার|الكوثر|3","আল-কাফিরুন|الكافرون|6","আন-নাসর|النصر|3","আল-লাহাব|المسد|5","আল-ইখলাস|الإخلاص|4","আল-ফালাক|الفلق|5","আন-নাস|الناس|6"];
+const surahList = surahNames.map((s, i) => {
+const [bn, ar, ayahs] = s.split('|');
+return { number: i + 1, bn, ar, ayahs: parseInt(ayahs) };
+});
+
+/* ============ AMAL GROUPS CONFIG ============ */
+const AMAL_GROUPS = [
+{ id: 'ag1', title: '১. ফরজ নামাজ', icon: 'fa-mosque', items: [
+{ id: 'a_fajr', label: 'ফজর' }, { id: 'a_dhuhr', label: 'জোহর' }, { id: 'a_asr', label: 'আসর' }, { id: 'a_maghrib', label: 'মাগরিব' }, { id: 'a_isha', label: 'এশা' } ] },
+{ id: 'ag2', title: '২. সুন্নত ও নফল নামাজ', icon: 'fa-star', items: [
+{ id: 'a_fajr_sunnah', label: 'ফজরের সুন্নতে মুয়াক্কাদা' }, { id: 'a_dhuhr_sunnah', label: 'জোহরের সুন্নতে মুয়াক্কাদা' }, { id: 'a_asr_sunnah', label: 'আসরের সুন্নত' }, { id: 'a_maghrib_sunnah', label: 'মাগরিবের সুন্নতে মুয়াক্কাদা' }, { id: 'a_isha_sunnah', label: 'এশার সুন্নতে মুয়াক্কাদা' }, { id: 'a_witr', label: 'বিতর নামাজ (ওয়াজিব)' }, { id: 'a_tahajjud', label: 'তাহাজ্জুদ' }, { id: 'a_ishraq', label: 'ইশরাক' }, { id: 'a_chasht', label: 'চাশত (দুহা)' }, { id: 'a_awwabin', label: 'আওয়াবিন' } ] },
+{ id: 'ag3', title: '৩. নামাজের মাসনুন দোয়া', icon: 'fa-hands-praying', items: [
+{ id: 'a_sana', label: 'সানা পড়েছি' }, { id: 'a_tashahhud', label: 'আত্তাহিয়্যাতু' }, { id: 'a_darud', label: 'দরুদে ইবরাহিম' }, { id: 'a_dua_masura', label: 'দোয়া মাসুরা' }, { id: 'a_post_namaz_tasbih', label: 'নামাজের পর ৩৩/৩৩/৩৪ তাসবিহ' }, { id: 'a_ayatul_kursi', label: 'আয়াতুল কুরসি' } ] },
+{ id: 'ag4', title: '৪. কুরআন ও জিকির', icon: 'fa-book-quran', items: [
+{ id: 'a_quran_tilawat', label: 'কুরআন তিলাওয়াত' }, { id: 'a_quran_hifz', label: 'কুরআন হিফজ' }, { id: 'a_daily_tasbih', label: 'দৈনিক তাসবিহ/জিকির' }, { id: 'a_durood', label: 'দৈনিক দরুদ পাঠ' }, { id: 'a_istegfar', label: 'ইস্তেগফার' } ] },
+{ id: 'ag5', title: '৫. দৈনন্দিন ভাল কাজ', icon: 'fa-heart', items: [
+{ id: 'a_salam', label: 'সালাম দেওয়া ও উত্তর দেওয়া' }, { id: 'a_parents', label: 'বাবা-মায়ের খেদমত' }, { id: 'a_relatives', label: 'আত্মীয়দের খোঁজ নেওয়া' }, { id: 'a_teacher', label: 'উস্তাদ/শিক্ষকের প্রতি সম্মান' }, { id: 'a_help', label: 'অন্যকে সাহায্য করা' }, { id: 'a_sadaqah', label: 'সদকা করা' }, { id: 'a_hadith', label: 'হাদীস পড়া/শেখা' }, { id: 'a_ilm', label: 'দ্বীনি ইলম অর্জন' } ] },
+{ id: 'ag6', title: '৬. চরিত্র ও নৈতিকতা', icon: 'fa-user-shield', items: [
+{ id: 'a_truth', label: 'মিথ্যা বলিনি' }, { id: 'a_gossip', label: 'গীবত করিনি' }, { id: 'a_anger', label: 'রাগ নিয়ন্ত্রণ করেছি' }, { id: 'a_backbite', label: 'কারও দোষ চর্চা করিনি' }, { id: 'a_halal', label: 'হালাল খাবার খেয়েছি' }, { id: 'a_haram', label: 'হারাম থেকে বেঁচে থেকেছি' } ] },
+{ id: 'ag7', title: '৭. স্বাস্থ্য ও রুটিন', icon: 'fa-heart-pulse', items: [
+{ id: 'a_early_sleep', label: 'সময়মতো ঘুমিয়েছি' }, { id: 'a_exercise', label: 'শরীরচর্চা/হাঁটা' }, { id: 'a_clean', label: 'পরিষ্কার-পরিচ্ছন্ন থেকেছি' }, { id: 'a_miswak', label: 'মিসওয়াক/দাঁত পরিষ্কার' } ] },
+{ id: 'ag8', title: '৮. ঘুমানোর আগের আমল', icon: 'fa-moon', items: [
+{ id: 'a_wudu', label: 'উযূ করে ঘুমানো' }, { id: 'a_surah_mulk', label: 'সূরা মুলক তিলাওয়াত' }, { id: 'a_surah_ikhlas', label: 'সূরা ইখলাস, ফালাক ও নাস' }, { id: 'a_sleep_dua', label: 'ঘুমানোর দোয়া পড়া' } ] }
+];
+
+/* ============ AUTH FLOW ============ */
+function switchAuthTab(mode) {
+authMode = mode;
+document.getElementById('tabLogin').classList.toggle('active', mode === 'login');
+document.getElementById('tabSignup').classList.toggle('active', mode === 'signup');
+document.getElementById('signupNameGroup').style.display = mode === 'signup' ? 'block' : 'none';
+document.getElementById('authSubmitBtn').innerHTML = mode === 'login' ? '🔵 লগইন করুন' : '✨ অ্যাকাউন্ট খুলুন';
+document.getElementById('authError').innerText = '';
+}
+
+async function submitAuth() {
+const email = document.getElementById('authEmail').value.trim();
+const pass = document.getElementById('authPass').value;
+const name = document.getElementById('authName').value.trim();
+const err = document.getElementById('authError');
+err.innerText = '';
+if(!email || !pass) { err.innerText = 'ইমেইল ও পাসওয়ার্ড দিন'; return; }
+if(pass.length < 6) { err.innerText = 'পাসওয়ার্ড কমপক্ষে ৬ অক্ষর'; return; }
+if(authMode === 'signup' && !name) { err.innerText = 'নাম দিন'; return; }
+try {
+document.getElementById('authSubmitBtn').innerText = 'অপেক্ষা করুন...';
+if(authMode === 'login') {
+await auth.signInWithEmailAndPassword(email, pass);
+} else {
+const cred = await auth.createUserWithEmailAndPassword(email, pass);
+await cred.user.updateProfile({ displayName: name });
+await db.ref('users/' + cred.user.uid + '/profile').set({ name: name, email: email, type: 'gmail', createdAt: Date.now() });
+}
+} catch(e) {
+document.getElementById('authSubmitBtn').innerHTML = authMode === 'login' ? '🔵 লগইন করুন' : '✨ অ্যাকাউন্ট খুলুন';
+let msg = e.message;
+if(e.code === 'auth/user-not-found') msg = 'এই ইমেইলে কোনো অ্যাকাউন্ট নেই';
+else if(e.code === 'auth/wrong-password') msg = 'ভুল পাসওয়ার্ড';
+else if(e.code === 'auth/email-already-in-use') msg = 'এই ইমেইল আগেই ব্যবহৃত';
+else if(e.code === 'auth/invalid-email') msg = 'ইমেইল সঠিক নয়';
+else if(e.code === 'auth/network-request-failed') msg = 'নেটওয়ার্ক সমস্যা';
+err.innerText = msg;
+}
+}
+
+async function loginAsGuest() {
+try {
+await auth.signInAnonymously();
+} catch(e) {
+alert('অতিথি লগইনে সমস্যা: ' + e.message);
+}
+}
+
+auth.onAuthStateChanged(async (user) => {
+if(user) {
+currentUser = user;
+// Ensure profile exists
+const snap = await db.ref('users/' + user.uid + '/profile').once('value');
+let profile = snap.val();
+if(!profile) {
+profile = { name: user.displayName || (user.isAnonymous ? 'অতিথি' : 'ব্যবহারকারী'), email: user.email || 'guest@local', type: user.isAnonymous ? 'guest' : 'gmail', createdAt: Date.now() };
+await db.ref('users/' + user.uid + '/profile').set(profile);
+} else if(user.email && !profile.email) {
+profile.email = user.email;
+db.ref('users/' + user.uid + '/profile').update({ email: user.email });
+}
+currentUserProfile = profile;
+// Update users list for admin
+db.ref('users/' + user.uid + '/profile').update({ lastActive: Date.now() });
+
+// Load per-user data
+await loadUserData(user.uid);
+
+// Show app
+document.getElementById('login-page').classList.remove('active');
+document.getElementById('mainApp').classList.remove('hidden');
+document.getElementById('userChipName').innerText = profile.name;
+initApp();
+} else {
+currentUser = null;
+currentUserProfile = null;
+document.getElementById('login-page').classList.add('active');
+document.getElementById('mainApp').classList.add('hidden');
+}
+});
+
+async function logoutUser() {
+if(!confirm('লগআউট করবেন?')) return;
+toggleUserMenu();
+await auth.signOut();
+location.reload();
+}
+
+/* ============ USER MENU ============ */
+function toggleUserMenu() {
+const p = document.getElementById('userMenuPop');
+p.classList.toggle('hidden');
+if(!p.classList.contains('hidden') && currentUserProfile) {
+document.getElementById('userMenuName').innerText = currentUserProfile.name;
+document.getElementById('userMenuEmail').innerText = currentUserProfile.email;
+}
+}
+function openUserNotifSettings() { toggleUserMenu(); switchPage('notif-page'); }
+function openUserBackup() {
+toggleUserMenu();
+const data = {
+profile: currentUserProfile,
+amal: amalHistory,
+notes: notes,
+exportedAt: new Date().toISOString()
+};
+const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = 'jamia-backup-' + Date.now() + '.json';
+a.click();
+URL.revokeObjectURL(url);
+alert('✅ ব্যাকআপ ফাইল ডাউনলোড হয়েছে।');
+}
+
+/* ============ PER-USER DATA ============ */
+async function loadUserData(uid) {
+const snap = await db.ref('users/' + uid).once('value');
+const data = snap.val() || {};
+amalHistory = data.amal || {};
+notes = data.notes || [];
+// fallback to localStorage if empty (migration)
+if(Object.keys(amalHistory).length === 0) {
+amalHistory = JSON.parse(localStorage.getItem('amalHistory') || '{}');
+if(Object.keys(amalHistory).length > 0) await db.ref('users/' + uid + '/amal').set(amalHistory);
+}
+if(notes.length === 0) {
+const localNotes = JSON.parse(localStorage.getItem('madrasaNotes') || '[]');
+if(localNotes.length > 0) { notes = localNotes; await db.ref('users/' + uid + '/notes').set(notes); }
+}
+}
+
+async function saveUserAmal() {
+if(!currentUser) return;
+await db.ref('users/' + currentUser.uid + '/amal').set(amalHistory);
+localStorage.setItem('amalHistory', JSON.stringify(amalHistory));
+}
+
+async function saveUserNotes() {
+if(!currentUser) return;
+await db.ref('users/' + currentUser.uid + '/notes').set(notes);
+localStorage.setItem('madrasaNotes', JSON.stringify(notes));
+}
+
+/* ============ PAGE NAV ============ */
+function switchPage(pageId, element) {
+document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+const page = document.getElementById(pageId);
+if(page) page.classList.add('active');
+if(element) {
+document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+element.classList.add('active');
+}
+window.scrollTo({ top: 0, behavior: 'smooth' });
+if(pageId === 'namaz-page') fetchLocationAndUpdateNamaz();
+if(pageId === 'amal-tracker-page') { renderAmalGroups(); loadAmalToday(); renderReport(); }
+if(pageId === 'quran-page') renderSurahList();
+if(pageId === 'mushaf-page') populateMushafSelect();
+if(pageId === 'notif-page') renderNotifSettings();
+if(pageId === 'calendar-page') renderCalendar();
+}
+
+/* ============ DARK MODE ============ */
+function toggleDarkMode() {
+document.body.classList.toggle('dark-mode');
+const btn = document.getElementById('darkModeToggle');
+if(document.body.classList.contains('dark-mode')) { localStorage.setItem('darkMode', 'enabled'); btn.innerHTML = '☀️'; }
+else { localStorage.setItem('darkMode', 'disabled'); btn.innerHTML = '🌙'; }
+}
+
+/* ============ MAIN MENU ============ */
+function toggleMainMenu() { document.getElementById('mainMenuDrawer').classList.toggle('hidden'); }
+
+function getDefaultMenu() {
+return {
+"1": { id: "1", name: "পরিচিতি", icon: "fa-solid fa-building-columns", parent: "main", order: 1, image: "", desc: "প্রতিষ্ঠানের প্রতিষ্ঠাতা, পরিচালনা পর্ষদ, শিক্ষক ও স্টাফবৃন্দের পরিচয়।", children: {
+"1-1": { id: "1-1", name: "প্রতিষ্ঠাতা", icon: "fa-solid fa-user-tie", parent: "1", order: 1, children: {} },
+"1-2": { id: "1-2", name: "মোতাওয়াল্লী", icon: "fa-solid fa-user-shield", parent: "1", order: 2, children: {} },
+"1-3": { id: "1-3", name: "প্রিন্সিপাল", icon: "fa-solid fa-user-graduate", parent: "1", order: 3, children: {} },
+"1-4": { id: "1-4", name: "শাইখুল হাদীস ও মুহাদ্দিস", icon: "fa-solid fa-book-open-reader", parent: "1", order: 4, children: {} },
+"1-5": { id: "1-5", name: "মুদাররিসবৃন্দ", icon: "fa-solid fa-chalkboard-user", parent: "1", order: 5, children: {} },
+"1-6": { id: "1-6", name: "স্টাফবৃন্দ", icon: "fa-solid fa-users", parent: "1", order: 6, children: {} }
+}},
+"2": { id: "2", name: "গ্যালারি", icon: "fa-solid fa-images", parent: "main", order: 2, desc: "ক্যাম্পাস, শিক্ষা কার্যক্রম, মাহফিল ও প্রতিষ্ঠানের স্মরণীয় মুহূর্ত।", children: {
+"2-1": { id: "2-1", name: "ক্যাম্পাস", icon: "fa-solid fa-school", parent: "2", order: 1, children: {} },
+"2-2": { id: "2-2", name: "শিক্ষা কার্যক্রম", icon: "fa-solid fa-book", parent: "2", order: 2, children: {} },
+"2-3": { id: "2-3", name: "দাওরায়ে হাদীস", icon: "fa-solid fa-graduation-cap", parent: "2", order: 3, children: {} },
+"2-4": { id: "2-4", name: "মাহফিল ও অনুষ্ঠান", icon: "fa-solid fa-bullhorn", parent: "2", order: 4, children: {} },
+"2-5": { id: "2-5", name: "স্মরণীয় মুহূর্তসমূহ", icon: "fa-solid fa-camera", parent: "2", order: 5, children: {} }
+}},
+"3": { id: "3", name: "শিক্ষা কার্যক্রম", icon: "fa-solid fa-graduation-cap", parent: "main", order: 3, desc: "প্রতিষ্ঠানের বিভিন্ন বিভাগ ও পাঠদান কার্যক্রম সম্পর্কে জানুন।", children: {
+"3-1": { id: "3-1", name: "হিফজ বিভাগ", icon: "fa-solid fa-book-quran", parent: "3", order: 1, children: {} },
+"3-2": { id: "3-2", name: "কিতাব বিভাগ", icon: "fa-solid fa-book", parent: "3", order: 2, children: {} },
+"3-3": { id: "3-3", name: "নাজেরা বিভাগ", icon: "fa-solid fa-book-open", parent: "3", order: 3, children: {} },
+"3-4": { id: "3-4", name: "তাজবিদ বিভাগ", icon: "fa-solid fa-microphone", parent: "3", order: 4, children: {} },
+"3-5": { id: "3-5", name: "ইফতা বিভাগ", icon: "fa-solid fa-scale-balanced", parent: "3", order: 5, children: {} }
+}},
+"4": { id: "4", name: "যোগাযোগ ও ঠিকানা", icon: "fa-solid fa-address-book", parent: "main", order: 4, desc: "প্রতিষ্ঠানের ঠিকানা, যোগাযোগের মাধ্যম ও অফিস সময়সূচি।", children: {
+"4-1": { id: "4-1", name: "প্রতিষ্ঠানের ঠিকানা", icon: "fa-solid fa-location-dot", parent: "4", order: 1, children: {} },
+"4-2": { id: "4-2", name: "মোবাইল নম্বর", icon: "fa-solid fa-phone", parent: "4", order: 2, children: {} },
+"4-3": { id: "4-3", name: "ই-মেইল", icon: "fa-solid fa-envelope", parent: "4", order: 3, children: {} },
+"4-4": { id: "4-4", name: "গুগল ম্যাপ লোকেশন", icon: "fa-solid fa-map-location-dot", parent: "4", order: 4, children: {} },
+"4-5": { id: "4-5", name: "অফিস সময়সূচি", icon: "fa-solid fa-clock", parent: "4", order: 5, children: {} }
+}}
+};
+}
+
+db.ref('menu_data').on('value', (snap) => {
+const data = snap.val();
+if(!data) { db.ref('menu_data').set(getDefaultMenu()); return; }
+menuData = data;
+renderMainMenu();
+renderMenuTreeView();
+populateMenuParentSelect();
+});
+
+function renderMainMenu() {
+const c = document.getElementById('mainMenuContent');
+if(!c) return;
+c.innerHTML = '';
+Object.values(menuData).sort((a,b) => (a.order||0) - (b.order||0)).forEach(item => {
+const hasKids = item.children && Object.keys(item.children).length > 0;
+const kidHTML = hasKids ? `<div class="menu-sub-container" id="submenu_${item.id}">${Object.values(item.children).sort((a,b)=>(a.order||0)-(b.order||0)).map(k => `<div class="menu-sub-item" onclick="openMenuItem('${k.id}')"><i class="${k.icon||'fa-solid fa-circle'}" style="color:var(--accent-green);margin-right:8px;"></i>${k.name}</div>`).join('')}</div>` : '';
+c.innerHTML += `<div><div class="menu-main-item" onclick="${hasKids ? `toggleSubmenu('${item.id}')` : `openMenuItem('${item.id}')`}"><span><i class="${item.icon||'fa-solid fa-circle'}" style="margin-right:10px;"></i>${item.name}</span>${hasKids ? `<i class="fa-solid fa-chevron-down" id="arrow_${item.id}"></i>` : ''}</div>${kidHTML}</div>`;
+});
+c.innerHTML += `<div style="margin-top:20px;padding-top:15px;border-top:1px dashed #ccc;"><div onclick="toggleMainMenu();switchPage('admin-page');" style="padding:12px;background:#fef3c7;color:#92400e;border-radius:10px;font-weight:600;cursor:pointer;text-align:center;"><i class="fa-solid fa-user-shield"></i> এডমিন প্যানেল</div></div>`;
+}
+
+function toggleSubmenu(id) {
+const s = document.getElementById('submenu_' + id);
+const a = document.getElementById('arrow_' + id);
+if(s) {
+const open = s.classList.toggle('open');
+if(a) a.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+}
+}
+
+function findMenuItem(id) {
+if(menuData[id]) return menuData[id];
+for(let k in menuData) { if(menuData[k].children && menuData[k].children[id]) return menuData[k].children[id]; }
+return null;
+}
+
+/* ============ OPEN MENU ITEM (with special routing for known categories) ============ */
+function openMenuItem(id) {
+const item = findMenuItem(id);
+if(!item) return;
+toggleMainMenu();
+
+// Special routing: পরিচিতি সাবমেনু
+const aboutMap = { '1-1': 'founder', '1-2': 'mutawalli', '1-3': 'principal', '1-4': 'shaikhul_hadith', '1-5': 'mudarris', '1-6': 'staff' };
+if(aboutMap[id]) { renderAboutPage(item.name, aboutMap[id]); return; }
+if(id === '1') { renderAboutIndex(); return; }
+
+// গ্যালারি
+const galMap = { '2-1': 'campus', '2-2': 'education', '2-3': 'dawra', '2-4': 'mahfil', '2-5': 'moments' };
+if(galMap[id]) { renderGalleryPage(item.name, galMap[id]); return; }
+if(id === '2') { renderGalleryIndex(); return; }
+
+// শিক্ষা কার্যক্রম
+const eduMap = { '3-1': 'hifz', '3-2': 'kitab', '3-3': 'najera', '3-4': 'tajweed', '3-5': 'ifta' };
+if(eduMap[id]) { renderEducationPage(item.name, eduMap[id]); return; }
+if(id === '3') { renderEducationIndex(); return; }
+
+// যোগাযোগ
+if(id && id.startsWith('4')) { renderContactPage(id); return; }
+
+// Default: generic menu detail
+renderGenericMenuPage(item);
+}
+
+function renderGenericMenuPage(item) {
+document.getElementById('menuDetailTitle').innerText = item.name;
+const c = document.getElementById('menuDetailContent');
+let html = '';
+if(item.image) html += `<div style="background:var(--card-bg);border-radius:16px;padding:15px;margin-bottom:15px;box-shadow:var(--shadow);"><img src="${item.image}" style="width:100%;border-radius:12px;object-fit:cover;max-height:300px;" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3299/3299935.png'"></div>`;
+if(item.desc) html += `<div style="background:var(--card-bg);border-radius:16px;padding:15px;margin-bottom:15px;box-shadow:var(--shadow);"><div style="font-size:.95rem;line-height:1.7;">${item.desc.replace(/\n/g,'<br>')}</div></div>`;
+if(item.children && Object.keys(item.children).length > 0) {
+html += `<div style="background:var(--card-bg);border-radius:16px;padding:15px;box-shadow:var(--shadow);"><h4 style="color:var(--primary-green);margin-bottom:10px;"><i class="fa-solid fa-list"></i> সাব-মেনু</h4>`;
+Object.values(item.children).sort((a,b)=>(a.order||0)-(b.order||0)).forEach(k => {
+html += `<div onclick="openMenuItem('${k.id}')" style="padding:12px;margin:6px 0;background:var(--bg-color);border-radius:10px;cursor:pointer;border-left:4px solid var(--accent-green);"><i class="${k.icon||'fa-solid fa-circle'}" style="color:var(--accent-green);margin-right:8px;"></i><strong>${k.name}</strong></div>`;
+});
+html += `</div>`;
+}
+if(!html) html = '<div class="form-box text-center"><p style="color:#6b7280;">এই মেনুর তথ্য এডমিন প্যানেল থেকে যোগ করুন।</p></div>';
+c.innerHTML = html;
+switchPage('menu-detail-page');
+}
+
+/* ============ ABOUT PAGES ============ */
+function renderAboutIndex() {
+document.getElementById('menuDetailTitle').innerText = 'পরিচিতি';
+const c = document.getElementById('menuDetailContent');
+c.innerHTML = '<p style="text-align:center;color:#6b7280;padding:15px;">উপরের মেনু থেকে একটি ক্যাটাগরি নির্বাচন করুন।</p>';
+switchPage('menu-detail-page');
+}
+
+function renderAboutPage(title, cat) {
+db.ref('about/' + cat).once('value').then(snap => {
+const data = snap.val() || {};
+document.getElementById('menuDetailTitle').innerText = title;
+const c = document.getElementById('menuDetailContent');
+let html = '';
+const people = Object.values(data).sort((a,b) => (a.order||0) - (b.order||0));
+if(people.length === 0) {
+html = '<div class="form-box text-center"><p style="color:#6b7280;">এই ক্যাটাগরিতে এখনো কোনো তথ্য যোগ করা হয়নি। এডমিন প্যানেল থেকে যোগ করুন।</p></div>';
+} else {
+people.forEach(p => {
+const ph = p.photo || 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png';
+html += `<div class="person-card"><img src="${ph}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'"><div class="person-card-body"><h4>${p.name || ''}</h4>${p.role ? `<div class="role">${p.role}</div>` : ''}${p.bio ? `<div class="bio">${p.bio.replace(/\n/g,'<br>')}</div>` : ''}${p.phone ? `<div class="meta"><i class="fa-solid fa-phone"></i> <a href="tel:${p.phone}" style="color:inherit;text-decoration:none;">${p.phone}</a></div>` : ''}</div></div>`;
+});
+}
+c.innerHTML = html;
+switchPage('menu-detail-page');
+});
+}
+
+/* ============ GALLERY PAGES ============ */
+function renderGalleryIndex() {
+document.getElementById('menuDetailTitle').innerText = 'গ্যালারি';
+const c = document.getElementById('menuDetailContent');
+c.innerHTML = '<p style="text-align:center;color:#6b7280;padding:15px;">উপরের মেনু থেকে একটি ক্যাটাগরি নির্বাচন করুন।</p>';
+switchPage('menu-detail-page');
+}
+
+let currentGalleryImages = [];
+function renderGalleryPage(title, cat) {
+db.ref('gallery/' + cat).once('value').then(snap => {
+const data = snap.val() || {};
+document.getElementById('menuDetailTitle').innerText = title;
+const c = document.getElementById('menuDetailContent');
+const images = Object.entries(data).map(([id, v]) => ({ id, ...v })).sort((a,b) => (b.timestamp||0) - (a.timestamp||0));
+currentGalleryImages = images;
+if(images.length === 0) {
+c.innerHTML = '<div class="form-box text-center"><p style="color:#6b7280;">এই ক্যাটাগরিতে এখনো কোনো ছবি নেই।</p></div>';
+} else {
+let html = '<div class="gallery-grid">';
+images.forEach((img, idx) => {
+html += `<div class="gallery-thumb" onclick="openGalleryLightbox(${idx})"><img src="${img.url}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3299/3299935.png'"></div>`;
+});
+html += '</div>';
+c.innerHTML = html;
+}
+switchPage('menu-detail-page');
+});
+}
+
+function openGalleryLightbox(idx) {
+const img = currentGalleryImages[idx];
+if(!img) return;
+const lb = document.createElement('div');
+lb.className = 'gallery-lightbox';
+lb.innerHTML = `<button class="close-btn" onclick="this.parentElement.remove()"><i class="fa-solid fa-xmark"></i></button>
+<button class="nav-btn" style="left:10px;" onclick="navGallery(${idx-1},this.parentElement)"><i class="fa-solid fa-chevron-left"></i></button>
+<img src="${img.url}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3299/3299935.png'">
+<button class="nav-btn" style="right:10px;" onclick="navGallery(${idx+1},this.parentElement)"><i class="fa-solid fa-chevron-right"></i></button>
+<div class="cap">${img.caption || ''}</div>`;
+document.body.appendChild(lb);
+}
+
+function navGallery(newIdx, container) {
+if(newIdx < 0 || newIdx >= currentGalleryImages.length) return;
+const img = currentGalleryImages[newIdx];
+const imgEl = container.querySelector('img');
+imgEl.src = img.url;
+container.querySelector('.cap').innerText = img.caption || '';
+container.querySelectorAll('.nav-btn')[0].setAttribute('onclick', `navGallery(${newIdx-1},this.parentElement)`);
+container.querySelectorAll('.nav-btn')[1].setAttribute('onclick', `navGallery(${newIdx+1},this.parentElement)`);
+}
+
+/* ============ EDUCATION PAGES ============ */
+function renderEducationIndex() {
+document.getElementById('menuDetailTitle').innerText = 'শিক্ষা কার্যক্রম';
+const c = document.getElementById('menuDetailContent');
+const divs = [
+{ id: 'hifz', name: 'হিফজ বিভাগ', icon: 'fa-book-quran' },
+{ id: 'kitab', name: 'কিতাব বিভাগ', icon: 'fa-book' },
+{ id: 'najera', name: 'নাজেরা বিভাগ', icon: 'fa-book-open' },
+{ id: 'tajweed', name: 'তাজবিদ বিভাগ', icon: 'fa-microphone' },
+{ id: 'ifta', name: 'ইফতা বিভাগ', icon: 'fa-scale-balanced' }
+];
+let html = '';
+divs.forEach(d => {
+html += `<div class="edu-card" onclick="renderEducationPage('${d.name}','${d.id}')"><h4><i class="fa-solid ${d.icon}"></i> ${d.name}</h4><p>বিভাগের তথ্য দেখতে ক্লিক করুন</p></div>`;
+});
+c.innerHTML = html;
+switchPage('menu-detail-page');
+}
+
+function renderEducationPage(title, divId) {
+db.ref('education/' + divId).once('value').then(snap => {
+const d = snap.val() || {};
+document.getElementById('menuDetailTitle').innerText = title;
+const c = document.getElementById('menuDetailContent');
+let html = '';
+if(d.image) html += `<div style="background:var(--card-bg);border-radius:16px;padding:15px;margin-bottom:15px;box-shadow:var(--shadow);"><img src="${d.image}" style="width:100%;border-radius:12px;max-height:280px;object-fit:cover;"></div>`;
+if(!d.title && !d.intro && !d.goal && !d.curriculum && !d.admission && !d.teachers) {
+html = '<div class="form-box text-center"><p style="color:#6b7280;">এই বিভাগের তথ্য এখনো যোগ করা হয়নি। এডমিন প্যানেল থেকে যোগ করুন।</p></div>';
+} else {
+if(d.title) html += `<h3 style="color:var(--primary-green);margin-bottom:12px;">${d.title}</h3>`;
+if(d.intro) html += `<div class="edu-card"><h4><i class="fa-solid fa-info-circle"></i> সংক্ষিপ্ত পরিচিতি</h4><p>${d.intro.replace(/\n/g,'<br>')}</p></div>`;
+if(d.goal) html += `<div class="edu-card"><h4><i class="fa-solid fa-bullseye"></i> পাঠদানের উদ্দেশ্য</h4><p>${d.goal.replace(/\n/g,'<br>')}</p></div>`;
+if(d.curriculum) html += `<div class="edu-card"><h4><i class="fa-solid fa-list-check"></i> শিক্ষাক্রম</h4><p>${d.curriculum.replace(/\n/g,'<br>')}</p></div>`;
+if(d.admission) html += `<div class="edu-card"><h4><i class="fa-solid fa-user-plus"></i> ভর্তি তথ্য</h4><p>${d.admission.replace(/\n/g,'<br>')}</p></div>`;
+if(d.teachers) html += `<div class="edu-card"><h4><i class="fa-solid fa-chalkboard-user"></i> শিক্ষকবৃন্দ</h4><p>${d.teachers.replace(/\n/g,'<br>')}</p></div>`;
+}
+c.innerHTML = html;
+switchPage('menu-detail-page');
+});
+}
+
+/* ============ CONTACT PAGE ============ */
+function renderContactPage(subId) {
+db.ref('contact_info').once('value').then(snap => {
+const d = snap.val() || {};
+const titles = { '4-1': 'প্রতিষ্ঠানের ঠিকানা', '4-2': 'মোবাইল নম্বর', '4-3': 'ই-মেইল', '4-4': 'গুগল ম্যাপ লোকেশন', '4-5': 'অফিস সময়সূচি', '4': 'যোগাযোগ ও ঠিকানা' };
+document.getElementById('menuDetailTitle').innerText = titles[subId] || 'যোগাযোগ';
+const c = document.getElementById('menuDetailContent');
+let html = '';
+const showAll = (subId === '4');
+if((subId === '4-1' || showAll) && d.address) html += contactCard('fa-location-dot', 'ঠিকানা', d.address.replace(/\n/g,'<br>'), 'copyAddress(\'' + d.address.replace(/'/g,"\\'").replace(/\n/g,' ') + '\')');
+if((subId === '4-2' || showAll) && d.phone1) html += contactCard('fa-phone', 'মোবাইল ১', `<a href="tel:${d.phone1}">${d.phone1}</a>`);
+if((subId === '4-2' || showAll) && d.phone2) html += contactCard('fa-phone', 'মোবাইল ২', `<a href="tel:${d.phone2}">${d.phone2}</a>`);
+if((subId === '4-3' || showAll) && d.email) html += contactCard('fa-envelope', 'ই-মেইল', `<a href="mailto:${d.email}">${d.email}</a>`);
+if((subId === '4-4' || showAll) && d.map) html += `<div class="contact-card"><div class="ico"><i class="fa-solid fa-map-location-dot"></i></div><div class="body"><h4>গুগল ম্যাপ লোকেশন</h4><a href="${d.map}" target="_blank" style="display:inline-block;margin-top:6px;padding:8px 16px;background:var(--primary-green);color:#fff;border-radius:20px;text-decoration:none;font-size:.85rem;"><i class="fa-solid fa-map-pin"></i> ম্যাপে দেখুন</a></div></div>`;
+if((subId === '4-5' || showAll) && d.hours) html += contactCard('fa-clock', 'অফিস সময়সূচি', d.hours.replace(/\n/g,'<br>'));
+if(!html) html = '<div class="form-box text-center"><p style="color:#6b7280;">তথ্য এখনো যোগ করা হয়নি। এডমিন প্যানেল থেকে যোগ করুন।</p></div>';
+c.innerHTML = html;
+switchPage('menu-detail-page');
+});
+}
+
+function contactCard(icon, title, body, extraBtn) {
+let btn = '';
+if(extraBtn) btn = `<button onclick="${extraBtn}" style="margin-top:6px;padding:6px 12px;background:var(--light-green);color:var(--primary-green);border:none;border-radius:15px;font-size:.75rem;cursor:pointer;"><i class="fa-solid fa-copy"></i> কপি করুন</button>`;
+return `<div class="contact-card"><div class="ico"><i class="fa-solid ${icon}"></i></div><div class="body"><h4>${title}</h4><p>${body}</p>${btn}</div></div>`;
+}
+
+function copyAddress(text) {
+navigator.clipboard.writeText(text).then(() => alert('✅ কপি হয়েছে'));
+}
+
+/* ============ MENU ADMIN ============ */
+function populateMenuParentSelect() {
+const s = document.getElementById('menuParent');
+if(!s) return;
+s.innerHTML = '<option value="main">-- প্রধান মেনু --</option>';
+Object.values(menuData).sort((a,b)=>(a.order||0)-(b.order||0)).forEach(i => s.innerHTML += `<option value="${i.id}">📁 ${i.name}</option>`);
+}
+
+function renderMenuTreeView() {
+const c = document.getElementById('menuTreeView');
+if(!c) return;
+c.innerHTML = '';
+Object.values(menuData).sort((a,b)=>(a.order||0)-(b.order||0)).forEach(item => {
+const has = item.children && Object.keys(item.children).length > 0;
+c.innerHTML += `<div class="menu-tree-item"><div style="display:flex;justify-content:space-between;align-items:center;"><div><i class="${item.icon||'fa-solid fa-circle'}" style="color:var(--accent-green);margin-right:6px;"></i><strong>${item.name}</strong></div><div style="display:flex;gap:5px;"><button class="btn-primary btn-sm btn-warning" onclick="editMenuItem('${item.id}','main')">✏️</button><button class="btn-primary btn-sm btn-danger" onclick="deleteMenuItem('${item.id}','main')">🗑️</button></div></div>${has ? `<div class="menu-tree-children">${Object.values(item.children).sort((a,b)=>(a.order||0)-(b.order||0)).map(k => `<div class="menu-tree-child"><span><i class="${k.icon||'fa-solid fa-circle'}" style="color:var(--accent-green);margin-right:6px;font-size:.75rem;"></i>${k.name}</span><div><button class="btn-primary btn-sm btn-warning" onclick="editMenuItem('${k.id}','${item.id}')">✏️</button><button class="btn-primary btn-sm btn-danger" onclick="deleteMenuItem('${k.id}','${item.id}')">✕</button></div></div>`).join('')}</div>` : ''}</div>`;
+});
+}
+
+function addMenuItem() {
+const p = document.getElementById('menuParent').value;
+const n = document.getElementById('menuName').value.trim();
+const i = document.getElementById('menuIcon').value.trim() || 'fa-solid fa-circle';
+const im = document.getElementById('menuImage').value.trim();
+const d = document.getElementById('menuDesc').value.trim();
+if(!n) return alert('নাম দিন!');
+const nid = 'menu_' + Date.now();
+if(p === 'main') {
+const o = Object.keys(menuData).length + 1;
+db.ref('menu_data/' + nid).set({ id: nid, name: n, icon: i, image: im, desc: d, parent: 'main', order: o, children: {} }, (err) => { if(!err) { alert('✅ যোগ!'); resetMenuForm(); } });
+} else {
+const pi = menuData[p];
+if(!pi) return alert('Parent পাওয়া যায়নি!');
+const o = pi.children ? Object.keys(pi.children).length + 1 : 1;
+db.ref('menu_data/' + p + '/children/' + nid).set({ id: nid, name: n, icon: i, image: im, desc: d, parent: p, order: o, children: {} }, (err) => { if(!err) { alert('✅ যোগ!'); resetMenuForm(); } });
+}
+}
+
+function editMenuItem(id, pId) {
+const item = pId === 'main' ? menuData[id] : (menuData[pId] && menuData[pId].children ? menuData[pId].children[id] : null);
+if(!item) return alert('পাওয়া যায়নি');
+const n = prompt('নাম:', item.name); if(n === null) return;
+const i = prompt('আইকন:', item.icon || 'fa-solid fa-circle'); if(i === null) return;
+const im = prompt('ছবি URL:', item.image || ''); if(im === null) return;
+const d = prompt('তথ্য:', item.desc || ''); if(d === null) return;
+const path = pId === 'main' ? 'menu_data/' + id : 'menu_data/' + pId + '/children/' + id;
+db.ref(path).update({ name: n.trim(), icon: i.trim() || 'fa-solid fa-circle', image: im.trim(), desc: d.trim() }, (err) => { if(!err) alert('✅ আপডেট!'); });
+}
+
+function deleteMenuItem(id, pId) {
+if(!confirm('ডিলিট করবেন?')) return;
+const path = pId === 'main' ? 'menu_data/' + id : 'menu_data/' + pId + '/children/' + id;
+db.ref(path).remove((err) => { if(!err) alert('✅ ডিলিট!'); });
+}
+
+function resetMenuForm() {
+document.getElementById('menuName').value = '';
+document.getElementById('menuIcon').value = 'fa-solid fa-circle';
+document.getElementById('menuImage').value = '';
+document.getElementById('menuDesc').value = '';
+document.getElementById('menuParent').value = 'main';
+}
+
+/* ============ ABOUT ADMIN ============ */
+function addAboutPerson() {
+const cat = document.getElementById('aboutCat').value;
+const name = document.getElementById('aboutName').value.trim();
+const role = document.getElementById('aboutRole').value.trim();
+const photo = document.getElementById('aboutPhoto').value.trim();
+const bio = document.getElementById('aboutBio').value.trim();
+const phone = document.getElementById('aboutPhone').value.trim();
+if(!name) return alert('নাম দিন');
+db.ref('about/' + cat).push({ name, role, photo, bio, phone, timestamp: Date.now() }, (err) => { if(!err) { alert('✅ যোগ!'); clearAboutForm(); } });
+}
+function clearAboutForm() {
+['aboutName','aboutRole','aboutPhoto','aboutBio','aboutPhone'].forEach(id => document.getElementById(id).value = '');
+}
+db.ref('about').on('value', (snap) => {
+const d = snap.val() || {};
+const c = document.getElementById('aboutListAdmin');
+if(!c) return;
+c.innerHTML = '';
+const catNames = { founder: 'প্রতিষ্ঠাতা', mutawalli: 'মোতাওয়াল্লী', principal: 'প্রিন্সিপাল', shaikhul_hadith: 'শাইখুল হাদীস', mudarris: 'মুদাররিস', staff: 'স্টাফ' };
+Object.keys(d).forEach(cat => {
+const people = d[cat];
+c.innerHTML += `<div style="margin-bottom:10px;"><strong style="color:var(--primary-green);">${catNames[cat] || cat}</strong>`;
+Object.entries(people).forEach(([id, p]) => {
+c.innerHTML += `<div class="admin-list-item"><div class="admin-list-info">${p.name} ${p.role ? '— ' + p.role : ''}</div><button class="btn-primary btn-sm btn-danger" onclick="db.ref('about/${cat}/${id}').remove()">🗑️</button></div>`;
+});
+c.innerHTML += `</div>`;
+});
+if(!Object.keys(d).length) c.innerHTML = '<p style="font-size:.85rem;color:#777;">কোনো তথ্য নেই।</p>';
+});
+
+/* ============ GALLERY ADMIN ============ */
+function addGalleryImage() {
+const cat = document.getElementById('galCat').value;
+const url = document.getElementById('galUrl').value.trim();
+const caption = document.getElementById('galCaption').value.trim();
+if(!url) return alert('ছবির URL দিন');
+db.ref('gallery/' + cat).push({ url, caption, timestamp: Date.now() }, (err) => { if(!err) { alert('✅ যোগ!'); document.getElementById('galUrl').value = ''; document.getElementById('galCaption').value = ''; } });
+}
+db.ref('gallery').on('value', (snap) => {
+const d = snap.val() || {};
+const c = document.getElementById('galleryListAdmin');
+if(!c) return;
+c.innerHTML = '';
+const catNames = { campus: 'ক্যাম্পাস', education: 'শিক্ষা', dawra: 'দাওরায়ে হাদীস', mahfil: 'মাহফিল', moments: 'স্মরণীয়' };
+Object.keys(d).forEach(cat => {
+c.innerHTML += `<div style="margin-bottom:10px;"><strong style="color:var(--primary-green);">${catNames[cat] || cat} (${Object.keys(d[cat]).length})</strong>`;
+Object.entries(d[cat]).forEach(([id, img]) => {
+c.innerHTML += `<div class="admin-list-item"><div class="admin-list-info"><img src="${img.url}" style="width:40px;height:40px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:8px;">${img.caption || ''}</div><button class="btn-primary btn-sm btn-danger" onclick="db.ref('gallery/${cat}/${id}').remove()">🗑️</button></div>`;
+});
+c.innerHTML += `</div>`;
+});
+if(!Object.keys(d).length) c.innerHTML = '<p style="font-size:.85rem;color:#777;">কোনো ছবি নেই।</p>';
+});
+
+/* ============ EDUCATION ADMIN ============ */
+function saveEducation() {
+const div = document.getElementById('eduDiv').value;
+const data = {
+title: document.getElementById('eduTitle').value.trim(),
+intro: document.getElementById('eduIntro').value.trim(),
+goal: document.getElementById('eduGoal').value.trim(),
+curriculum: document.getElementById('eduCurriculum').value.trim(),
+admission: document.getElementById('eduAdmission').value.trim(),
+teachers: document.getElementById('eduTeachers').value.trim(),
+image: document.getElementById('eduImage').value.trim(),
+updatedAt: Date.now()
+};
+db.ref('education/' + div).set(data, (err) => { if(!err) alert('✅ সেভ!'); });
+}
+db.ref('education').on('value', (snap) => {
+const d = snap.val() || {};
+const c = document.getElementById('eduListAdmin');
+if(!c) return;
+const names = { hifz: 'হিফজ', kitab: 'কিতাব', najera: 'নাজেরা', tajweed: 'তাজবিদ', ifta: 'ইফতা' };
+c.innerHTML = '';
+Object.keys(names).forEach(k => {
+const filled = d[k] && d[k].title ? '✅' : '⭕';
+c.innerHTML += `<div class="admin-list-item"><div class="admin-list-info">${filled} ${names[k]}</div><button class="btn-primary btn-sm btn-info" onclick="loadEduToForm('${k}')">লোড</button></div>`;
+});
+});
+function loadEduToForm(k) {
+db.ref('education/' + k).once('value').then(s => {
+const d = s.val() || {};
+document.getElementById('eduDiv').value = k;
+document.getElementById('eduTitle').value = d.title || '';
+document.getElementById('eduIntro').value = d.intro || '';
+document.getElementById('eduGoal').value = d.goal || '';
+document.getElementById('eduCurriculum').value = d.curriculum || '';
+document.getElementById('eduAdmission').value = d.admission || '';
+document.getElementById('eduTeachers').value = d.teachers || '';
+document.getElementById('eduImage').value = d.image || '';
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+}
+
+/* ============ CONTACT ADMIN ============ */
+db.ref('contact_info').on('value', (snap) => {
+const d = snap.val() || {};
+const el = (id) => document.getElementById(id);
+if(el('ctAddress')) el('ctAddress').value = d.address || '';
+if(el('ctPhone1')) el('ctPhone1').value = d.phone1 || '';
+if(el('ctPhone2')) el('ctPhone2').value = d.phone2 || '';
+if(el('ctEmail')) el('ctEmail').value = d.email || '';
+if(el('ctMap')) el('ctMap').value = d.map || '';
+if(el('ctHours')) el('ctHours').value = d.hours || '';
+});
+function saveContact() {
+db.ref('contact_info').set({
+address: document.getElementById('ctAddress').value.trim(),
+phone1: document.getElementById('ctPhone1').value.trim(),
+phone2: document.getElementById('ctPhone2').value.trim(),
+email: document.getElementById('ctEmail').value.trim(),
+map: document.getElementById('ctMap').value.trim(),
+hours: document.getElementById('ctHours').value.trim()
+}, (err) => { if(!err) alert('✅ সেভ!'); });
+}
+
+/* ============ NOTIFICATION ADMIN + USER ============ */
+function addNotification() {
+const cat = document.getElementById('ntfCat').value;
+const title = document.getElementById('ntfTitle').value.trim();
+const arabic = document.getElementById('ntfArabic').value.trim();
+const bangla = document.getElementById('ntfBangla').value.trim();
+const ref = document.getElementById('ntfRef').value.trim();
+const date = document.getElementById('ntfDate').value;
+if(!title && !bangla) return alert('শিরোনাম বা বার্তা দিন');
+db.ref('notifications').push({ cat, title, arabic, bangla, ref, date: date || getTodayKey(), timestamp: Date.now() }, (err) => { if(!err) { alert('✅ যোগ!'); ['ntfTitle','ntfArabic','ntfBangla','ntfRef'].forEach(id => document.getElementById(id).value = ''); } });
+}
+db.ref('notifications').on('value', (snap) => {
+const d = snap.val() || {};
+const c = document.getElementById('notifListAdmin');
+if(c) {
+c.innerHTML = '';
+const arr = Object.entries(d).sort((a,b) => (b[1].timestamp||0) - (a[1].timestamp||0));
+if(arr.length === 0) c.innerHTML = '<p style="font-size:.85rem;color:#777;">কোনো নোটিফিকেশন নেই।</p>';
+arr.forEach(([id, n]) => {
+c.innerHTML += `<div class="admin-list-item"><div class="admin-list-info"><strong>${n.title}</strong><br><span style="color:#6b7280;font-size:.75rem;">${n.cat} • ${n.date || ''}</span></div><button class="btn-primary btn-sm btn-danger" onclick="db.ref('notifications/${id}').remove()">🗑️</button></div>`;
+});
+}
+renderUserNotifications(d);
+});
+
+function renderUserNotifications(data) {
+const c = document.getElementById('notifList');
+if(!c) return;
+const arr = Object.values(data).sort((a,b) => (b.timestamp||0) - (a.timestamp||0));
+if(arr.length === 0) { c.innerHTML = '<p style="text-align:center;color:#6b7280;padding:20px;">এই মুহূর্তে কোনো বার্তা নেই।</p>'; return; }
+const prefs = JSON.parse(localStorage.getItem('notifPrefs') || '{}');
+c.innerHTML = '';
+arr.forEach(n => {
+if(prefs[n.cat] === false) return;
+c.innerHTML += `<div class="notif-card"><span class="badge">${getCatName(n.cat)}</span><h4>${n.title || ''}</h4><div class="body">${n.arabic ? `<div class="ar">${n.arabic}</div>` : ''}${n.bangla ? n.bangla.replace(/\n/g,'<br>') : ''}</div>${n.ref ? `<div class="ref">📖 ${n.ref}</div>` : ''}</div>`;
+});
+if(!c.innerHTML) c.innerHTML = '<p style="text-align:center;color:#6b7280;padding:20px;">আপনার পছন্দের ক্যাটাগরিতে কোনো বার্তা নেই।</p>';
+}
+
+function getCatName(c) {
+return { jumuah: 'জুমাবার', eid_fitr: 'ঈদুল ফিতর', eid_adha: 'ঈদুল আজহা', ramadan: 'রমজান', ashura: 'আশুরা', arafah: 'আরাফা', laylatul_qadr: 'শবে কদর', daily: 'দৈনিক', general: 'সাধারণ' }[c] || c;
+}
+
+function renderNotifSettings() {
+const c = document.getElementById('notifSettingsList');
+if(!c) return;
+const cats = [
+{ id: 'jumuah', name: 'জুমাবার' },
+{ id: 'eid_fitr', name: 'ঈদুল ফিতর' },
+{ id: 'eid_adha', name: 'ঈদুল আজহা' },
+{ id: 'ramadan', name: 'রমজান' },
+{ id: 'ashura', name: 'আশুরা' },
+{ id: 'arafah', name: 'আরাফা' },
+{ id: 'laylatul_qadr', name: 'শবে কদর' },
+{ id: 'daily', name: 'দৈনিক আয়াত ও হাদিস' },
+{ id: 'general', name: 'সাধারণ' }
+];
+const prefs = JSON.parse(localStorage.getItem('notifPrefs') || '{}');
+c.innerHTML = cats.map(cat => `<div class="amal-check-item"><input type="checkbox" ${prefs[cat.id] !== false ? 'checked' : ''} onchange="toggleNotifPref('${cat.id}', this.checked)"><label>${cat.name}</label></div>`).join('');
+}
+
+function toggleNotifPref(id, val) {
+const prefs = JSON.parse(localStorage.getItem('notifPrefs') || '{}');
+prefs[id] = val;
+localStorage.setItem('notifPrefs', JSON.stringify(prefs));
+db.ref('notifications').once('value').then(s => renderUserNotifications(s.val() || {}));
+}
+
+/* ============ MADRASA SETTINGS ============ */
+db.ref('madrasa_settings').on('value', (snap) => {
+const d = snap.val() || {};
+const n = document.getElementById('madrasaName'); if(n) n.innerText = d.name || 'জামিয়া আরাবিয়া ইমদাদুল উলূম';
+const a = document.getElementById('madrasaAddress'); if(a) a.innerText = d.address || 'ফরিদাবাদ, ঢাকা-১২০৪';
+const l = document.getElementById('madrasaLogoHeader'); if(l) l.src = d.logo || 'https://i.ibb.co.com/DDhMcBnD/IMG-20261003-021938.jpg';
+const ai = document.getElementById('madrasaArabicImg'), at = document.getElementById('madrasaArabic');
+if(d.arabicImg && d.arabicImg.trim() && ai) { ai.src = d.arabicImg; ai.style.display = 'block'; if(at) at.style.display = 'none'; }
+else if(d.arabic && at) at.innerText = d.arabic;
+const el = (id) => document.getElementById(id);
+if(el('editMadrasaName')) el('editMadrasaName').value = d.name || '';
+if(el('editMadrasaArabic')) el('editMadrasaArabic').value = d.arabic || '';
+if(el('editMadrasaArabicImg')) el('editMadrasaArabicImg').value = d.arabicImg || '';
+if(el('editMadrasaAddress')) el('editMadrasaAddress').value = d.address || '';
+if(el('editMadrasaLogo')) el('editMadrasaLogo').value = d.logo || '';
+});
+function saveMadrasaInfo() {
+db.ref('madrasa_settings').set({
+name: document.getElementById('editMadrasaName').value.trim(),
+arabic: document.getElementById('editMadrasaArabic').value.trim(),
+arabicImg: document.getElementById('editMadrasaArabicImg').value.trim(),
+address: document.getElementById('editMadrasaAddress').value.trim(),
+logo: document.getElementById('editMadrasaLogo').value.trim()
+}, (err) => { if(!err) alert('✅ সেভ!'); });
+}
+
+/* ============ SOCIAL LINKS ============ */
+db.ref('social_links').on('value', (snap) => {
+const d = snap.val() || {};
+const grid = document.getElementById('socialLinksGrid');
+if(grid) {
+grid.innerHTML = '';
+if(d.facebook) grid.innerHTML += `<a href="${d.facebook}" class="social-link-btn" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>`;
+if(d.youtube) grid.innerHTML += `<a href="${d.youtube}" class="social-link-btn" target="_blank"><i class="fa-brands fa-youtube"></i></a>`;
+if(d.whatsapp) grid.innerHTML += `<a href="${d.whatsapp}" class="social-link-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>`;
+if(d.telegram) grid.innerHTML += `<a href="${d.telegram}" class="social-link-btn" target="_blank"><i class="fa-brands fa-telegram"></i></a>`;
+if(d.email) grid.innerHTML += `<a href="mailto:${d.email}" class="social-link-btn"><i class="fa-solid fa-envelope"></i></a>`;
+if(grid.innerHTML === '') grid.innerHTML = '<p style="opacity:.7;font-size:.85rem;">শীঘ্রই যুক্ত হবে</p>';
+}
+const el = (id) => document.getElementById(id);
+if(el('editSocialFb')) el('editSocialFb').value = d.facebook || '';
+if(el('editSocialYt')) el('editSocialYt').value = d.youtube || '';
+if(el('editSocialWa')) el('editSocialWa').value = d.whatsapp || '';
+if(el('editSocialTg')) el('editSocialTg').value = d.telegram || '';
+if(el('editSocialEmail')) el('editSocialEmail').value = d.email || '';
+});
+function saveSocialLinks() {
+db.ref('social_links').set({
+facebook: document.getElementById('editSocialFb').value.trim(),
+youtube: document.getElementById('editSocialYt').value.trim(),
+whatsapp: document.getElementById('editSocialWa').value.trim(),
+telegram: document.getElementById('editSocialTg').value.trim(),
+email: document.getElementById('editSocialEmail').value.trim()
+}, (err) => { if(!err) alert('✅ সেভ!'); });
+}
+
+/* ============ AD + COUNTDOWN ============ */
+db.ref('adSettings').on('value', (snap) => {
+const d = snap.val() || {};
+const t = document.getElementById('adText'); if(t) t.innerHTML = d.text || 'সর্বশেষ আপডেট...';
+if(document.getElementById('editAdText')) document.getElementById('editAdText').value = d.text || '';
+if(document.getElementById('editAdDate')) document.getElementById('editAdDate').value = d.date || '';
+const ts = d.date ? new Date(d.date + 'T00:00:00').getTime() : new Date('2026-11-23T00:00:00').getTime();
+startCountdown(ts);
+});
+function saveAdSettings() {
+db.ref('adSettings').set({ text: document.getElementById('editAdText').value.trim(), date: document.getElementById('editAdDate').value }, (err) => { if(!err) alert('✅ সেভ!'); });
+}
+function startCountdown(target) {
+if(window.countdownInterval) clearInterval(window.countdownInterval);
+function update() {
+const dist = target - Date.now();
+const el = (id) => document.getElementById(id);
+if(!el('cdDays')) return;
+if(dist < 0) { ['cdDays','cdHours','cdMinutes','cdSeconds'].forEach(i => el(i).innerText = '০'); return; }
+el('cdDays').innerText = toBn(Math.floor(dist / 86400000));
+el('cdHours').innerText = toBn(Math.floor((dist % 86400000) / 3600000).toString().padStart(2,'0'));
+el('cdMinutes').innerText = toBn(Math.floor((dist % 3600000) / 60000).toString().padStart(2,'0'));
+el('cdSeconds').innerText = toBn(Math.floor((dist % 60000) / 1000).toString().padStart(2,'0'));
+}
+update();
+window.countdownInterval = setInterval(update, 1000);
+}
+
+/* ============ NAMAZ TIMES ============ */
+db.ref('settings/namazTimes').on('value', (snap) => {
+const d = snap.val();
+if(d) {
+updateWidgetTime({ fajr: d.fajr || namazTimesToday.fajr, dhuhr: d.dhuhr || namazTimesToday.dhuhr, asr: d.asr || namazTimesToday.asr, maghrib: d.maghrib || namazTimesToday.maghrib, isha: d.isha || namazTimesToday.isha });
+const el = (id) => document.getElementById(id);
+if(el('editFajr')) el('editFajr').value = d.fajr || '';
+if(el('editDhuhr')) el('editDhuhr').value = d.dhuhr || '';
+if(el('editAsr')) el('editAsr').value = d.asr || '';
+if(el('editMaghrib')) el('editMaghrib').value = d.maghrib || '';
+if(el('editIsha')) el('editIsha').value = d.isha || '';
+}
+});
+function saveNamazTimes() {
+db.ref('settings/namazTimes').set({
+fajr: document.getElementById('editFajr').value.trim() || '৪:৪৫',
+dhuhr: document.getElementById('editDhuhr').value.trim() || '১২:০৫',
+asr: document.getElementById('editAsr').value.trim() || '৪:১৫',
+maghrib: document.getElementById('editMaghrib').value.trim() || '৫:৫০',
+isha: document.getElementById('editIsha').value.trim() || '৭:০৫'
+}, (err) => { if(!err) alert('✅ সেভ!'); });
+}
+function updateWidgetTime(t) {
+namazTimesToday = t;
+const el = (id) => document.getElementById(id);
+if(el('wfajr')) el('wfajr').innerText = t.fajr;
+if(el('wdhuhr')) el('wdhuhr').innerText = t.dhuhr;
+if(el('wasr')) el('wasr').innerText = t.asr;
+if(el('wmaghrib')) el('wmaghrib').innerText = t.maghrib;
+if(el('wisha')) el('wisha').innerText = t.isha;
+}
+
+/* ============ WIDGET ============ */
+function startNamazWidget() {
+setInterval(() => {
+const now = new Date();
+const monthsBn = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
+const wdb = document.getElementById('widgetDateBn');
+if(wdb) wdb.innerText = `${toBn(now.getDate())} ${monthsBn[now.getMonth()]} ${toBn(now.getFullYear())}`;
+const h = getHijriDate(now);
+const wda = document.getElementById('widgetDateAr');
+if(wda) wda.innerText = `${toBn(h.day)} ${h.monthBn} ${toBn(h.year)}`;
+
+const parse = (t) => {
+if(!t) return null;
+let b = t.replace(/[০-৯]/g, d => '০১২৩৪৫৬৭৮৯'.indexOf(d)).replace(/[^\d:]/g, '');
+const m = b.match(/(\d{1,2}):(\d{2})/);
+if(!m) return null;
+let hh = parseInt(m[1]), mm = parseInt(m[2]);
+if(hh >= 1 && hh <= 6) hh += 12;
+return hh * 60 + mm;
+};
+const nowMin = now.getHours() * 60 + now.getMinutes();
+const nowSec = now.getSeconds();
+const sched = NAMAZ_ORDER.map(k => ({ key: k, start: parse(namazTimesToday[k]) })).filter(s => s.start !== null).sort((a,b) => a.start - b.start);
+if(sched.length === 0) return;
+let cur = null;
+for(let i = 0; i < sched.length; i++) {
+const st = sched[i].start;
+const nx = (i+1 < sched.length) ? sched[i+1].start : sched[0].start + 1440;
+if(nowMin >= st && nowMin < nx) { cur = { ...sched[i], end: nx }; break; }
+}
+if(!cur) {
+const last = sched[sched.length - 1], first = sched[0];
+if(nowMin < first.start) cur = { key: last.key, start: last.start - 1440, end: first.start };
+}
+if(!cur) return;
+document.querySelectorAll('.widget-namaz-item').forEach(el => el.classList.toggle('active', el.dataset.namaz === cur.key));
+const total = (cur.end - cur.start) * 60;
+const elapsed = ((nowMin - cur.start) * 60) + nowSec;
+const pct = Math.max(0, Math.min(100, (elapsed / total) * 100));
+const fill = document.getElementById('widgetProgressFill');
+if(fill) fill.style.width = pct + '%';
+const remain = total - elapsed;
+const hh = Math.floor(remain / 3600), mm = Math.floor((remain % 3600) / 60), ss = remain % 60;
+const ct = document.getElementById('widgetCountdownText');
+if(ct) {
+let txt = `⏳ <strong>${NAMAZ_BN[cur.key]}</strong> ওয়াক্ত চলছে — বাকি `;
+if(hh > 0) txt += `${toBn(hh)} ঘন্টা `;
+txt += `${toBn(mm)} মিনিট <span class="sec">${toBn(ss.toString().padStart(2,'0'))} সেকেন্ড</span>`;
+ct.innerHTML = txt;
+}
+}, 1000);
+}
+
+/* ============ HIJRI ============ */
+function getHijriDate(date) {
+const jd = Math.floor((date.getTime() / 86400000) + 2440587.5);
+const l = jd - 1948440 + 10632;
+const n = Math.floor((l - 1) / 10631);
+const l2 = l - 10631 * n + 354;
+const j = Math.floor((10985 - l2) / 5316) * Math.floor((50 * l2) / 17719) + Math.floor(l2 / 5670) * Math.floor((43 * l2) / 15238);
+const l3 = l2 - Math.floor((30 - j) / 15) * Math.floor((17719 * j) / 50) - Math.floor(j / 16) * Math.floor((15238 * j) / 43) + 29;
+const month = Math.floor((24 * l3) / 709);
+const day = l3 - Math.floor((709 * month) / 24);
+const year = 30 * n + j - 30;
+const monthsBn = ['মুহাররম','সফর','রবিউল আউয়াল','রবিউস সানি','জমাদিউল আউয়াল','জমাদিউস সানি','রজব','শাবান','রমজান','শাওয়াল','জিলক্বদ','জিলহজ'];
+return { day, monthBn: monthsBn[month - 1] || 'মুহাররম', year };
+}
+
+/* ============ CALENDAR ============ */
+let currentMonth = new Date().getMonth(), currentYear = new Date().getFullYear();
+const monthsBn = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
+const daysBn = ['রবি','সোম','মঙ্গল','বুধ','বৃহস্পতি','শুক্র','শনি'];
+
+function renderCalendar() {
+const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+const today = new Date();
+const cmy = document.getElementById('calendarMonthYear');
+if(cmy) cmy.innerText = `${monthsBn[currentMonth]} ${toBn(currentYear)}`;
+const grid = document.getElementById('calendarGrid');
+if(!grid) return;
+grid.innerHTML = '';
+daysBn.forEach(d => grid.innerHTML += `<div class="cal-head-cell">${d}</div>`);
+for(let i = 0; i < firstDay; i++) grid.innerHTML += '<div></div>';
+for(let d = 1; d <= daysInMonth; d++) {
+const dt = new Date(currentYear, currentMonth, d);
+const hj = getHijriDate(dt);
+const isToday = d === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear();
+grid.innerHTML += `<div class="cal-day-cell ${isToday ? 'today' : ''}">${toBn(d)}<span class="hij">${toBn(hj.day)}</span></div>`;
+}
+const hdd = document.getElementById('hijriDateDisplay');
+const hjNow = getHijriDate(today);
+if(hdd) hdd.innerText = `আজ: ${toBn(hjNow.day)} ${hjNow.monthBn} ${toBn(hjNow.year)} হি.`;
+}
+function changeMonth(dir) {
+currentMonth += dir;
+if(currentMonth > 11) { currentMonth = 0; currentYear++; }
+if(currentMonth < 0) { currentMonth = 11; currentYear--; }
+renderCalendar();
+}
+
+/* ============ STUDENT DIRECTORY ============ */
+function openDivision(division, element) {
+currentDivision = division;
+document.getElementById('pageTitle').innerText = division + ' - ছাত্র তালিকা';
+document.getElementById('filterDivision').value = '';
+document.getElementById('filterDistrict').innerHTML = '<option value="">-- জেলা --</option>';
+document.getElementById('searchInput').value = '';
+populateFilterDivisions();
+switchPage('fuzala-page', element);
+loadStudents();
+}
+function populateFilterDivisions() {
+const s = document.getElementById('filterDivision');
+if(!s) return;
+s.innerHTML = '<option value="">-- বিভাগ --</option>';
+Object.keys(bdData).forEach(d => s.innerHTML += `<option value="${d}">${d}</option>`);
+}
+function onDivisionChange() {
+const div = document.getElementById('filterDivision').value;
+const dist = document.getElementById('filterDistrict');
+dist.innerHTML = '<option value="">-- জেলা --</option>';
+if(div && bdData[div]) Object.keys(bdData[div]).forEach(d => dist.innerHTML += `<option value="${d}">${d}</option>`);
+loadStudents();
+}
+function onDistrictChange() { loadStudents(); }
+function populateFormDivisions() {
+const s = document.getElementById('sDiv');
+if(!s) return;
+s.innerHTML = '<option value="">-- বিভাগ --</option>';
+Object.keys(bdData).forEach(d => s.innerHTML += `<option value="${d}">${d}</option>`);
+}
+function onFormDivChange() {
+const div = document.getElementById('sDiv').value;
+const dist = document.getElementById('sDist');
+const th = document.getElementById('sThana');
+dist.innerHTML = '<option value="">-- জেলা --</option>';
+th.innerHTML = '<option value="">-- থানা --</option>';
+if(div && bdData[div]) Object.keys(bdData[div]).forEach(d => dist.innerHTML += `<option value="${d}">${d}</option>`);
+}
+function onFormDistChange() {
+const div = document.getElementById('sDiv').value;
+const dist = document.getElementById('sDist').value;
+const th = document.getElementById('sThana');
+th.innerHTML = '<option value="">-- থানা --</option>';
+if(div && dist && bdData[div] && bdData[div][dist]) bdData[div][dist].forEach(t => th.innerHTML += `<option value="${t}">${t}</option>`);
+}
+
+db.ref('fuzala').on('value', (snap) => {
+const data = snap.val() || {};
+allStudents = [];
+let app = 0, pend = 0;
+const pc = document.getElementById('pendingContainer');
+if(pc) pc.innerHTML = '';
+let hp = false;
+for(let id in data) {
+const item = data[id];
+item.id = id;
+if(item.status === 'approved') { app++; allStudents.push(item); }
+else if(item.status === 'pending') {
+pend++; hp = true;
+if(pc) pc.innerHTML += `<div class="admin-list-item"><div class="admin-list-info"><strong>${item.name}</strong> — ${item.division}<br><span style="color:#555;">📍 ${item.district}, ${item.thana}</span><br><span style="color:#555;">📞 ${item.phone}</span></div><div style="display:flex;flex-direction:column;gap:5px;"><button class="btn-primary btn-sm" style="background:#10b981;" onclick="approveStudent('${id}')">✅</button><button class="btn-primary btn-sm btn-danger" onclick="rejectStudent('${id}')">❌</button></div></div>`;
+}
+}
+if(!hp && pc) pc.innerHTML = '<p style="font-size:.85rem;color:#777;">কোনো আবেদন নেই।</p>';
+if(document.getElementById('statTotalStudents')) document.getElementById('statTotalStudents').innerText = toBn(app);
+if(document.getElementById('statPending')) document.getElementById('statPending').innerText = toBn(pend);
+loadStudents();
+renderAdminStudents();
+});
+
+function loadStudents() {
+const c = document.getElementById('fuzalaListContainer');
+if(!c) return;
+const df = document.getElementById('filterDivision').value;
+const dcf = document.getElementById('filterDistrict').value;
+const sq = document.getElementById('searchInput').value.toLowerCase();
+c.innerHTML = '';
+let has = false;
+allStudents.forEach(s => {
+if(currentDivision !== 'সকল ছাত্র' && s.division !== currentDivision) return;
+if(df && s.district !== dcf) return;
+if(sq && !s.name.toLowerCase().includes(sq)) return;
+has = true;
+const ph = s.photo || 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png';
+const bio = s.bio ? `<div class="student-bio"><i class="fa-solid fa-quote-left"></i> ${s.bio}</div>` : '';
+c.innerHTML += `<div class="student-card"><div class="student-header"><img src="${ph}" class="student-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'"><div class="student-info"><h4>${s.name}</h4><p><i class="fa-solid fa-layer-group"></i> ${s.division}</p><p><i class="fa-solid fa-location-dot"></i> ${s.district || '-'}, ${s.thana || '-'}</p></div></div>${bio}<div class="social-btns">${s.phone ? `<a href="https://wa.me/88${s.phone}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>` : ''}${s.phone ? `<a href="tel:${s.phone}"><i class="fa-solid fa-phone"></i></a>` : ''}${s.fb ? `<a href="${s.fb}" target="_blank"><i class="fa-brands fa-facebook"></i></a>` : ''}</div></div>`;
+});
+if(!has) c.innerHTML = '<p style="text-align:center;color:#777;padding:20px;">কোনো ছাত্র পাওয়া যায়নি।</p>';
+}
+
+function renderAdminStudents() {
+const c = document.getElementById('adminStudentList');
+if(!c) return;
+const sq = (document.getElementById('adminSearchStudent')?.value || '').toLowerCase();
+c.innerHTML = '';
+let cnt = 0;
+allStudents.forEach(s => {
+if(sq && !s.name.toLowerCase().includes(sq)) return;
+cnt++;
+c.innerHTML += `<div class="admin-list-item"><div class="admin-list-info"><strong>${s.name}</strong><br><span style="color:#6b7280;">${s.division} | ${s.district}, ${s.thana}</span></div><div style="display:flex;gap:5px;"><button class="btn-primary btn-sm btn-warning" onclick="editStudent('${s.id}')">✏️</button><button class="btn-primary btn-sm btn-danger" onclick="deleteStudent('${s.id}')">🗑️</button></div></div>`;
+});
+if(cnt === 0) c.innerHTML = '<p style="font-size:.85rem;color:#777;">কোনো ছাত্র নেই।</p>';
+}
+
+function toggleForm() {
+const f = document.getElementById('addStudentForm');
+f.classList.toggle('hidden');
+if(!f.classList.contains('hidden')) {
+populateFormDivisions();
+document.getElementById('editStudentId').value = '';
+['sName','sPhoto','sPhone','sFb','sBio'].forEach(id => document.getElementById(id).value = '');
+document.getElementById('sDist').innerHTML = '<option value="">-- জেলা --</option>';
+document.getElementById('sThana').innerHTML = '<option value="">-- থানা --</option>';
+document.getElementById('submitBtn').innerText = 'জমা দিন';
+}
+}
+
+function submitStudentBio() {
+const id = document.getElementById('editStudentId').value;
+const name = document.getElementById('sName').value.trim();
+const division = document.getElementById('sDivision').value;
+const district = document.getElementById('sDist').value;
+const thana = document.getElementById('sThana').value;
+const photo = document.getElementById('sPhoto').value.trim() || 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png';
+const phone = document.getElementById('sPhone').value.trim();
+const fb = document.getElementById('sFb').value.trim();
+const bio = document.getElementById('sBio').value.trim();
+if(!name) return alert('নাম দিন!');
+if(!district) return alert('জেলা নির্বাচন করুন!');
+if(!thana) return alert('থানা নির্বাচন করুন!');
+if(!phone) return alert('WhatsApp নম্বর দিন!');
+const data = { name, division, district, thana, photo, phone, fb, bio };
+if(id) db.ref('fuzala/' + id).update(data, (err) => { if(!err) { alert('✅ আপডেট!'); toggleForm(); } });
+else {
+data.status = 'pending'; data.timestamp = Date.now();
+db.ref('fuzala').push(data, (err) => { if(!err) { alert('✅ জমা!'); toggleForm(); } });
+}
+}
+function approveStudent(id) { db.ref('fuzala/' + id).update({ status: 'approved' }, (err) => { if(!err) alert('✅ অনুমোদন!'); }); }
+function rejectStudent(id) { if(!confirm('বাতিল?')) return; db.ref('fuzala/' + id).remove(); }
+function editStudent(id) {
+const s = allStudents.find(x => x.id === id);
+if(!s) return;
+document.getElementById('editStudentId').value = id;
+document.getElementById('sName').value = s.name;
+document.getElementById('sDivision').value = s.division;
+populateFormDivisions();
+document.getElementById('sDiv').value = Object.keys(bdData).find(d => bdData[d][s.district]) || '';
+onFormDivChange();
+document.getElementById('sDist').value = s.district || '';
+onFormDistChange();
+document.getElementById('sThana').value = s.thana || '';
+document.getElementById('sPhoto').value = s.photo || '';
+document.getElementById('sPhone').value = s.phone || '';
+document.getElementById('sFb').value = s.fb || '';
+document.getElementById('sBio').value = s.bio || '';
+document.getElementById('submitBtn').innerText = 'আপডেট করুন';
+document.getElementById('addStudentForm').classList.remove('hidden');
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function deleteStudent(id) { if(!confirm('ডিলিট?')) return; db.ref('fuzala/' + id).remove(); }
+
+/* ============ QURAN READER ============ */
+function renderSurahList() {
+const c = document.getElementById('quranResults');
+if(!c) return;
+const q = (document.getElementById('quranSearchInput')?.value || '').trim().toLowerCase();
+let list = surahList;
+if(q) list = surahList.filter(s => s.bn.toLowerCase().includes(q) || s.ar.includes(q) || String(s.number) === toEn(q) || toBn(s.number) === q);
+c.innerHTML = '';
+if(list.length === 0) { c.innerHTML = '<p style="text-align:center;color:#6b7280;padding:20px;">পাওয়া যায়নি</p>'; return; }
+list.forEach(s => {
+c.innerHTML += `<div class="quran-surah-item" onclick="openSurah(${s.number})"><div class="num">${toBn(s.number)}</div><div class="left"><div class="name-bn">${s.bn}</div><div class="info">${toBn(s.ayahs)} আয়াত</div></div><div class="name-ar">${s.ar}</div></div>`;
+});
+}
+
+async function openSurah(num) {
+currentSurah = num;
+const s = surahList[num - 1];
+document.getElementById('ayahSurahTitle').innerText = `${s.bn} (${s.ar})`;
+const c = document.getElementById('ayahList');
+c.innerHTML = '<p style="text-align:center;padding:20px;">📥 আয়াত লোড হচ্ছে...</p>';
+switchPage('quran-ayah-page');
+
+// try firebase first
+const snap = await db.ref('quran/surah_' + num).once('value');
+let data = snap.val();
+if(!data) {
+// fallback to API
+try {
+const res = await fetch(`https://api.alquran.cloud/v1/surah/${num}/editions/quran-uthmani,bn.bengali`);
+const j = await res.json();
+if(j.code === 200 && j.data && j.data.length === 2) {
+const arabic = j.data[0].ayahs;
+const bangla = j.data[1].ayahs;
+c.innerHTML = '';
+arabic.forEach((a, i) => {
+c.innerHTML += `<div class="ayah-card"><span class="num-badge">আয়াত ${toBn(a.numberInSurah)}</span><div class="ar">${a.text}</div><div class="bn">${bangla[i].text}</div></div>`;
+});
+return;
+}
+} catch(e) {}
+c.innerHTML = '<p style="text-align:center;padding:20px;color:#dc2626;">আয়াত লোড করা যায়নি। ইন্টারনেট চেক করুন অথবা এডমিন Firebase-এ আয়াত যোগ করুন।</p>';
+return;
+}
+// render from firebase
+const arr = Object.values(data).sort((a,b) => (a.ayah_number||0) - (b.ayah_number||0));
+c.innerHTML = '';
+arr.forEach(a => {
+c.innerHTML += `<div class="ayah-card"><span class="num-badge">আয়াত ${toBn(a.ayah_number)}</span><div class="ar">${a.arabic_text || ''}</div><div class="bn">${a.bangla_text || ''}</div></div>`;
+});
+}
+
+/* ============ MUSHAF AUTO SCROLL ============ */
+function populateMushafSelect() {
+const s = document.getElementById('mushafSurahSelect');
+if(!s || s.options.length > 0) return;
+s.innerHTML = '<option value="">-- সূরা --</option>';
+surahList.forEach(su => s.innerHTML += `<option value="${su.number}">${su.number}. ${su.bn} (${su.ar})</option>`);
+}
+
+async function loadMushafSurah() {
+const num = parseInt(document.getElementById('mushafSurahSelect').value);
+if(!num) return;
+const c = document.getElementById('mushafScroll');
+c.innerHTML = '<p style="text-align:center;padding:20px;">লোড হচ্ছে...</p>';
+const snap = await db.ref('quran/surah_' + num).once('value');
+let data = snap.val();
+if(!data) {
+try {
+const res = await fetch(`https://api.alquran.cloud/v1/surah/${num}/quran-uthmani`);
+const j = await res.json();
+if(j.code === 200 && j.data) {
+const arabic = j.data.ayahs;
+c.innerHTML = arabic.map(a => `<div style="margin-bottom:10px;"><span style="background:var(--primary-green);color:#fff;padding:2px 8px;border-radius:10px;font-size:.75rem;">${toBn(a.numberInSurah)}</span> <span style="font-family:'Amiri',serif;font-size:1.7rem;direction:rtl;">${a.text}</span></div>`).join('');
+return;
+}
+} catch(e) {}
+c.innerHTML = '<p style="text-align:center;padding:20px;color:#dc2626;">লোড করা যায়নি।</p>';
+return;
+}
+const arr = Object.values(data).sort((a,b) => (a.ayah_number||0) - (b.ayah_number||0));
+c.innerHTML = arr.map(a => `<div style="margin-bottom:10px;"><span style="background:var(--primary-green);color:#fff;padding:2px 8px;border-radius:10px;font-size:.75rem;">${toBn(a.ayah_number)}</span> <span style="font-family:'Amiri',serif;font-size:1.7rem;direction:rtl;">${a.arabic_text || ''}</span></div>`).join('');
+}
+
+function toggleMushafScroll() {
+const btn = document.getElementById('mushafPlayBtn');
+const scroll = document.getElementById('mushafScroll');
+if(mushafScrollTimer) {
+clearInterval(mushafScrollTimer); mushafScrollTimer = null;
+btn.innerHTML = '<i class="fa-solid fa-play"></i> প্লে';
+} else {
+const speed = 11 - parseInt(document.getElementById('mushafSpeed').value);
+btn.innerHTML = '<i class="fa-solid fa-pause"></i> পজ';
+mushafScrollTimer = setInterval(() => {
+if(!scroll) return;
+scroll.scrollTop += 1;
+if(scroll.scrollTop + scroll.clientHeight >= scroll.scrollHeight - 2) {
+clearInterval(mushafScrollTimer); mushafScrollTimer = null;
+btn.innerHTML = '<i class="fa-solid fa-play"></i> প্লে';
+}
+}, speed * 15);
+}
+}
+function scrollMushafTop() {
+const s = document.getElementById('mushafScroll');
+if(s) s.scrollTop = 0;
+}
+
+/* ============ ZAKAT CALCULATOR ============ */
+function calcZakat() {
+const cash = parseFloat(document.getElementById('zk_cash').value) || 0;
+const bank = parseFloat(document.getElementById('zk_bank').value) || 0;
+const goldG = parseFloat(document.getElementById('zk_gold_g').value) || 0;
+const goldR = parseFloat(document.getElementById('zk_gold_rate').value) || 0;
+const silverG = parseFloat(document.getElementById('zk_silver_g').value) || 0;
+const silverR = parseFloat(document.getElementById('zk_silver_rate').value) || 0;
+const biz = parseFloat(document.getElementById('zk_business').value) || 0;
+const rec = parseFloat(document.getElementById('zk_receivable').value) || 0;
+const oth = parseFloat(document.getElementById('zk_other').value) || 0;
+const lia = parseFloat(document.getElementById('zk_liability').value) || 0;
+const nisabType = document.getElementById('zk_nisab_type').value;
+
+const goldVal = goldG * goldR;
+const silverVal = silverG * silverR;
+const totalAssets = cash + bank + goldVal + silverVal + biz + rec + oth;
+const netAssets = totalAssets - lia;
+
+// Nisab: gold 87.48g, silver 612.36g
+// approximate nisab value using silver rate, or gold rate if silver unknown
+let nisabValue = 0;
+if(nisabType === 'silver') {
+const sr = silverR || (goldR ? goldR / 90 : 0);
+nisabValue = sr * 612.36;
+} else {
+const gr = goldR || (silverR ? silverR * 90 : 0);
+nisabValue = gr * 87.48;
+}
+
+const eligible = netAssets >= nisabValue && netAssets > 0;
+const zakat = eligible ? netAssets * 0.025 : 0;
+
+const c = document.getElementById('zakatResult');
+c.innerHTML = `<div class="zakat-result">
+<div class="lbl">মোট সম্পদ</div><div class="big">৳ ${toBn(Math.round(totalAssets).toLocaleString('en-US'))}</div>
+<div class="row"><span>প্রযোজ্য দায়</span><span>৳ ${toBn(Math.round(lia).toLocaleString('en-US'))}</span></div>
+<div class="row"><span>নিট যাকাতযোগ্য সম্পদ</span><span>৳ ${toBn(Math.round(netAssets).toLocaleString('en-US'))}</span></div>
+<div class="row"><span>নিসাব ${nisabType === 'silver' ? '(রুপা)' : '(স্বর্ণ)'}</span><span>৳ ${toBn(Math.round(nisabValue).toLocaleString('en-US'))}</span></div>
+<div class="row"><span>নিসাব পূরণ</span><span>${eligible ? '✅ হ্যাঁ' : '❌ না'}</span></div>
+<div class="row"><span>যাকাতের হার</span><span>২.৫%</span></div>
+</div>
+${eligible ? `<div class="zakat-result" style="margin-top:10px;"><div class="lbl">প্রদেয় যাকাত</div><div class="big">৳ ${toBn(Math.round(zakat).toLocaleString('en-US'))}</div></div>` : '<div class="form-box text-center" style="margin-top:10px;"><p style="color:#6b7280;">নিসাব পূরণ হয়নি — যাকাত ফরজ নয়।</p></div>'}`;
+}
+
+/* ============ AGE CALCULATOR ============ */
+function calcAge() {
+const bd = document.getElementById('birthDate').value;
+if(!bd) return alert('জন্ম তারিখ দিন');
+const birth = new Date(bd);
+const today = new Date();
+if(birth > today) return alert('ভবিষ্যতের তারিখ গ্রহণযোগ্য নয়');
+
+let years = today.getFullYear() - birth.getFullYear();
+let months = today.getMonth() - birth.getMonth();
+let days = today.getDate() - birth.getDate();
+if(days < 0) { months--; days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
+if(months < 0) { years--; months += 12; }
+
+const nextBd = new Date(today.getFullYear(), birth.getMonth(), birth.getDate());
+if(nextBd < today) nextBd.setFullYear(nextBd.getFullYear() + 1);
+const diffDays = Math.ceil((nextBd - today) / 86400000);
+
+const totalDays = Math.floor((today - birth) / 86400000);
+
+document.getElementById('ageResult').innerHTML = `<div class="age-result">
+<div class="lbl">আপনার বয়স</div>
+<div class="grid">
+<div class="item"><div class="v">${toBn(years)}</div><div class="l">বছর</div></div>
+<div class="item"><div class="v">${toBn(months)}</div><div class="l">মাস</div></div>
+<div class="item"><div class="v">${toBn(days)}</div><div class="l">দিন</div></div>
+</div>
+<div style="margin-top:15px;font-size:.85rem;opacity:.9;">মোট দিন: ${toBn(totalDays)}</div>
+<div style="margin-top:8px;font-size:.85rem;opacity:.9;">পরবর্তী জন্মদিন: ${toBn(diffDays)} দিন পর</div>
+</div>`;
+}
+
+/* ============ COMPASS (Real GPS + Sensor) ============ */
+function enableCompass() {
+if(typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+DeviceOrientationEvent.requestPermission().then(p => { if(p === 'granted') startCompass(); else alert('সেন্সর অনুমতি প্রয়োজন'); });
+} else startCompass();
+}
+
+async function startCompass() {
+compassActive = true;
+document.getElementById('enableCompassBtn').style.display = 'none';
+document.getElementById('compassCircle').style.display = 'block';
+
+// Get location for qibla
+if(navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(
+(pos) => {
+currentLat = pos.coords.latitude;
+currentLon = pos.coords.longitude;
+currentQiblaBearing = calcQiblaBearing(currentLat, currentLon);
+updateCompassUI();
+},
+() => {
+currentQiblaBearing = calcQiblaBearing(23.7104, 90.4125);
+updateCompassUI();
+},
+{ enableHighAccuracy: true, timeout: 10000 }
+);
+} else {
+currentQiblaBearing = calcQiblaBearing(23.7104, 90.4125);
+updateCompassUI();
+}
+
+window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+window.addEventListener('deviceorientation', handleOrientation, true);
+}
+
+function handleOrientation(e) {
+let heading = 0;
+if(e.webkitCompassHeading) heading = e.webkitCompassHeading;
+else if(e.alpha !== null) heading = 360 - e.alpha;
+deviceHeading = heading;
+updateCompassUI();
+}
+
+function calcQiblaBearing(lat, lon) {
+const kaabaLat = 21.4225, kaabaLon = 39.8262;
+const φ1 = lat * Math.PI / 180;
+const φ2 = kaabaLat * Math.PI / 180;
+const Δλ = (kaabaLon - lon) * Math.PI / 180;
+const x = Math.sin(Δλ) * Math.cos(φ2);
+const y = Math.cos(φ1) * Math.sin(φ2) - Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ);
+const θ = Math.atan2(x, y) * 180 / Math.PI;
+return (θ + 360) % 360;
+}
+
+function updateCompassUI() {
+const circle = document.getElementById('compassCircle');
+if(!circle || !compassActive) return;
+const need = document.getElementById('compassNeedle');
+const qibla = document.getElementById('qiblaArrow');
+const deg = document.getElementById('compassDegree');
+const info = document.getElementById('qiblaInfo');
+if(need) need.style.transform = `rotate(${-deviceHeading}deg)`;
+if(qibla) qibla.style.transform = `rotate(${currentQiblaBearing - deviceHeading}deg)`;
+if(deg) deg.innerText = `${toBn(Math.round(deviceHeading))}°`;
+if(info) {
+const diff = ((currentQiblaBearing - deviceHeading) + 360) % 360;
+const dir = diff < 5 || diff > 355 ? '✅ কিবলার দিকে মুখ করে আছেন' : (diff < 180 ? `ডান দিকে ${toBn(Math.round(diff))}°` : `বাম দিকে ${toBn(Math.round(360 - diff))}°`);
+info.innerHTML = `কিবলার দিক: ${toBn(Math.round(currentQiblaBearing))}°<br>${dir}`;
+}
+}
+
+/* ============ LOCATION + NAMAZ ============ */
+function fetchLocationAndUpdateNamaz() {
+const t = document.getElementById('locationText');
+if(navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(
+(pos) => {
+currentLat = pos.coords.latitude;
+currentLon = pos.coords.longitude;
+updateNamazTimes(currentLat, currentLon);
+if(t) t.innerText = `অবস্থান: ${currentLat.toFixed(4)}, ${currentLon.toFixed(4)}`;
+},
+() => { if(t) t.innerText = 'লোকেশন পারমিশন নেই।'; },
+{ enableHighAccuracy: true, timeout: 10000 }
+);
+}
+}
+function updateNamazTimes(lat, lon) {
+const off = (90 - lon) * 4;
+const base = { fajr: '৪:৪৫', sunrise: '৬:০০', dhuhr: '১২:০৫', asr: '৪:১৫', maghrib: '৫:৫০', isha: '৭:০৫' };
+const adj = (t, o) => {
+const eng = t.replace(/[০-৯]/g, d => '০১২৩৪৫৬৭৮৯'.indexOf(d));
+const [h, m] = eng.split(':').map(Number);
+let tot = h * 60 + m + Math.round(o);
+if(tot < 0) tot += 1440;
+if(tot >= 1440) tot -= 1440;
+return `${toBn(Math.floor(tot/60))}:${toBn((tot%60).toString().padStart(2,'0'))}`;
+};
+const el = (id) => document.getElementById(id);
+if(el('fajrTime')) el('fajrTime').innerText = `${adj(base.fajr, off)} - ${adj(base.sunrise, off)}`;
+if(el('sunriseTime')) el('sunriseTime').innerText = adj(base.sunrise, off);
+if(el('dhuhrTime')) el('dhuhrTime').innerText = `${adj(base.dhuhr, off)} - ${adj(base.asr, off)}`;
+if(el('asrTime')) el('asrTime').innerText = `${adj(base.asr, off)} - ${adj(base.maghrib, off)}`;
+if(el('maghribTime')) el('maghribTime').innerText = `${adj(base.maghrib, off)} - ${adj(base.isha, off)}`;
+if(el('ishaTime')) el('ishaTime').innerText = `${adj(base.isha, off)} - ${adj('৪:৪৫', off)}`;
+if(el('sunsetTime')) el('sunsetTime').innerText = adj(base.maghrib, off);
+}
+
+/* ============ AMAL TRACKER ============ */
+function renderAmalGroups() {
+const c = document.getElementById('amalGroupsContainer');
+if(!c || c.dataset.rendered === '1') return;
+c.dataset.rendered = '1';
+c.innerHTML = AMAL_GROUPS.map((g, i) => `
+<div class="amal-group">
+<div class="amal-group-header" onclick="toggleAmalGroup('${g.id}')">
+<h4><i class="fa-solid ${g.icon}"></i> ${g.title}</h4>
+<i class="fa-solid fa-chevron-down" id="arrow_${g.id}"></i>
+</div>
+<div class="amal-group-body ${i === 0 ? 'open' : ''}" id="${g.id}">
+${g.items.map(it => `<div class="amal-check-item"><input type="checkbox" id="${it.id}" class="amal-cb" onchange="saveAmalToday()"><label for="${it.id}">${it.label}</label></div>`).join('')}
+</div>
+</div>`).join('');
+}
+
+function getTodayKey() {
+const d = new Date();
+return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+
+function toggleAmalGroup(id) {
+const b = document.getElementById(id);
+const a = document.getElementById('arrow_' + id);
+if(b) {
+const open = b.classList.toggle('open');
+if(a) a.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+}
+}
+
+async function saveAmalToday() {
+const cbs = document.querySelectorAll('.amal-cb');
+const checked = [];
+cbs.forEach(cb => { if(cb.checked) checked.push(cb.id); });
+const today = getTodayKey();
+amalHistory[today] = { checked, total: cbs.length, timestamp: Date.now() };
+await saveUserAmal();
+updateAmalProgress(checked.length, cbs.length);
+renderReport();
+}
+
+function loadAmalToday() {
+const cbs = document.querySelectorAll('.amal-cb');
+const today = getTodayKey();
+const todayData = amalHistory[today] || { checked: [] };
+cbs.forEach(cb => { cb.checked = todayData.checked.includes(cb.id); });
+updateAmalProgress(todayData.checked.length, cbs.length);
+}
+
+function updateAmalProgress(done, total) {
+if(total === undefined) {
+const cbs = document.querySelectorAll('.amal-cb');
+total = cbs.length;
+done = 0;
+cbs.forEach(cb => { if(cb.checked) done++; });
+}
+const pct = total > 0 ? (done / total) * 100 : 0;
+const pb = document.getElementById('amalProgressBar');
+const pt = document.getElementById('amalProgressText');
+if(pb) pb.style.width = pct + '%';
+if(pt) pt.innerText = `${toBn(done)} / ${toBn(total)} আমল সম্পন্ন (${toBn(Math.round(pct))}%)`;
+}
+
+function switchReport(type, btn) {
+currentReport = type;
+document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('active'));
+if(btn) btn.classList.add('active');
+renderReport();
+}
+
+function renderReport() {
+const c = document.getElementById('reportContent');
+if(!c) return;
+const today = new Date();
+let days = 1, title = 'আজকের রিপোর্ট';
+if(currentReport === 'weekly') { days = 7; title = 'শেষ ৭ দিনের রিপোর্ট'; }
+else if(currentReport === 'monthly') { days = 30; title = 'শেষ ৩০ দিনের রিপোর্ট'; }
+else if(currentReport === 'yearly') { days = 365; title = 'শেষ ৩৬৫ দিনের রিপোর্ট'; }
+
+let totalDone = 0, totalPossible = 0, daysWithData = 0;
+const totalAmal = AMAL_GROUPS.reduce((s, g) => s + g.items.length, 0);
+for(let i = 0; i < days; i++) {
+const d = new Date(today);
+d.setDate(d.getDate() - i);
+const key = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+if(amalHistory[key]) {
+totalDone += amalHistory[key].checked.length;
+totalPossible += amalHistory[key].total;
+daysWithData++;
+} else totalPossible += totalAmal;
+}
+const pct = totalPossible > 0 ? Math.round((totalDone / totalPossible) * 100) : 0;
+
+c.innerHTML = `<h4 style="color:var(--primary-green);margin-bottom:10px;text-align:center;">${title}</h4>
+<div class="report-stat-card"><div class="value">${toBn(pct)}%</div><div class="lbl">সামগ্রিক সম্পন্নতা</div></div>
+<div class="report-grid">
+<div class="report-stat-card"><div class="value">${toBn(totalDone)}</div><div class="lbl">আমল সম্পন্ন</div></div>
+<div class="report-stat-card"><div class="value">${toBn(daysWithData)}</div><div class="lbl">দিনের ডেটা</div></div>
+</div>
+${daysWithData === 0 ? '<p style="text-align:center;color:#6b7280;margin-top:10px;font-size:.85rem;">এখনো কোনো ডেটা নেই।</p>' : ''}`;
+}
+
+/* ============ CHAT ============ */
+function verifyAndShowChat() {
+const n = document.getElementById('msgSenderName').value.trim();
+const r = document.getElementById('msgSenderRoll').value.trim();
+if(!n || !r) return alert('নাম এবং দাখেলা দিন!');
+currentChatUser = { name: n, roll: r };
+document.getElementById('messageFormBox').classList.add('hidden');
+document.getElementById('chatBox').classList.remove('hidden');
+loadMessages();
+}
+function loadMessages() {
+db.ref('messages').on('value', (snap) => {
+const data = snap.val() || {};
+const c = document.getElementById('chatMessages');
+if(!c) return;
+c.innerHTML = '';
+let has = false;
+Object.values(data).forEach(msg => {
+has = true;
+const isMe = currentChatUser && msg.senderName === currentChatUser.name && msg.senderRoll === currentChatUser.roll;
+const div = document.createElement('div');
+div.style.cssText = `max-width:80%;padding:10px 14px;border-radius:12px;font-size:.9rem;${isMe ? 'background:var(--accent-green);color:#fff;align-self:flex-end;' : 'background:#e5e7eb;color:#1f2937;align-self:flex-start;'}`;
+div.innerHTML = `<span style="font-size:.7rem;font-weight:600;opacity:.8;">${msg.senderName} (${msg.senderRoll})</span><br>${msg.text}`;
+c.appendChild(div);
+});
+if(!has) c.innerHTML = '<p style="text-align:center;color:#6b7280;">কোনো মেসেজ নেই।</p>';
+c.scrollTop = c.scrollHeight;
+});
+}
+function sendMessage() {
+if(!currentChatUser) return alert('লগইন করুন।');
+const inp = document.getElementById('chatInput');
+const text = inp.value.trim();
+if(!text) return;
+db.ref('messages').push({ text, senderName: currentChatUser.name, senderRoll: currentChatUser.roll, timestamp: Date.now() });
+inp.value = '';
+}
+
+/* ============ ADMIN ============ */
+function loginAdmin() {
+const p = document.getElementById('adminPhone').value.trim();
+const ps = document.getElementById('adminPass').value.trim();
+if(p === ADMIN_PHONE && ps === ADMIN_PASS) {
+document.getElementById('admin-login-box').classList.add('hidden');
+document.getElementById('admin-dash').classList.remove('hidden');
+}
+else alert('❌ ভুল!');
+}
+function logoutAdmin() {
+document.getElementById('admin-login-box').classList.remove('hidden');
+document.getElementById('admin-dash').classList.add('hidden');
+document.getElementById('adminPhone').value = '';
+document.getElementById('adminPass').value = '';
+}
+
+/* Registered users list */
+db.ref('users').on('value', (snap) => {
+const data = snap.val() || {};
+const c = document.getElementById('registeredUsersList');
+if(!c) return;
+const arr = [];
+Object.entries(data).forEach(([uid, u]) => {
+if(u.profile) arr.push({ uid, ...u.profile });
+});
+arr.sort((a,b) => (b.lastActive||0) - (a.lastActive||0));
+if(arr.length === 0) { c.innerHTML = '<p style="font-size:.85rem;color:#777;">কোনো ব্যবহারকারী নেই।</p>'; return; }
+c.innerHTML = arr.map(u => `<div class="admin-list-item"><div class="admin-list-info"><strong>${u.name || 'নাম নেই'}</strong><br><span style="color:#6b7280;font-size:.75rem;">${u.email || 'guest'} • ${u.type || 'guest'}</span></div></div>`).join('');
+});
+
+/* ============ NOTES ============ */
+async function saveNote() {
+const t = document.getElementById('noteInput').value.trim();
+if(!t) return;
+notes.push({ text: t, date: new Date().toLocaleString('bn-BD') });
+await saveUserNotes();
+renderNotes();
+document.getElementById('noteInput').value = '';
+}
+function renderNotes() {
+const l = document.getElementById('noteList');
+if(!l) return;
+if(notes.length === 0) { l.innerHTML = '<p style="text-align:center;color:#6b7280;">কোনো নোট নেই।</p>'; return; }
+l.innerHTML = notes.slice().reverse().map((n, i) => `<div style="border-bottom:1px solid var(--bg-color);padding:8px 0;"><p>${n.text}</p><small style="color:#6b7280;">${n.date}</small><button class="btn-primary btn-sm btn-danger" style="float:right;margin-top:-20px;" onclick="deleteNote(${notes.length - 1 - i})">ডিলিট</button></div>`).join('');
+}
+async function deleteNote(i) { notes.splice(i, 1); await saveUserNotes(); renderNotes(); }
+
+/* ============ CALCULATOR ============ */
+let calcCurrent = '';
+function calcAppend(v) { if(calcCurrent === '0' && v !== '.') calcCurrent = ''; calcCurrent += v; document.getElementById('calcDisplay').innerText = calcCurrent; }
+function calcClear() { calcCurrent = ''; document.getElementById('calcDisplay').innerText = '0'; }
+function calcBackspace() { calcCurrent = calcCurrent.slice(0, -1); document.getElementById('calcDisplay').innerText = calcCurrent || '0'; }
+function calcEvaluate() { try { let r = eval(calcCurrent); if(r === undefined) r = 0; calcCurrent = r.toString(); document.getElementById('calcDisplay').innerText = calcCurrent; } catch(e) { document.getElementById('calcDisplay').innerText = 'Error'; calcCurrent = ''; } }
+
+/* ============ INIT ============ */
+function updateDate() {
+const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const t = new Date();
+const cd = document.getElementById('currentDate');
+if(cd) cd.innerText = t.toLocaleDateString('bn-BD', opts);
+const gd = document.getElementById('gregorianDate');
+if(gd) gd.innerText = t.toLocaleDateString('bn-BD', opts);
+const hj = getHijriDate(t);
+const hd = document.getElementById('hijriDate');
+if(hd) hd.innerText = `${toBn(hj.day)} ${hj.monthBn} ${toBn(hj.year)} হি.`;
+}
+
+function initApp() {
+updateDate();
+renderCalendar();
+startNamazWidget();
+renderAmalGroups();
+loadAmalToday();
+renderReport();
+renderSurahList();
+updateWidgetTime(namazTimesToday);
+if(localStorage.getItem('darkMode') === 'enabled') {
+document.body.classList.add('dark-mode');
+const b = document.getElementById('darkModeToggle');
+if(b) b.innerHTML = '☀️';
+}
+}
+
+window.addEventListener('load', () => {
+if(localStorage.getItem('darkMode') === 'enabled') {
+document.body.classList.add('dark-mode');
+const b = document.getElementById('darkModeToggle');
+if(b) b.innerHTML = '☀️';
+}
+});
+</script>
+</body>
+</html>
